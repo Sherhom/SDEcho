@@ -1,0 +1,3 @@
+change_type|recipient_type|recipient_state|recipient_country|investigator_type|investigator_state|investigator_country|investigator_primary|c2|payment_country|medical_supply|payment_value|investigator_code
+cms_2022_4
+cms_2021_4

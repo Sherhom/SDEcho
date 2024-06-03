@@ -1,0 +1,3 @@
+o_orderstatus|l_shipinstruct|sn_regionkey|p_mfgr|o_orderpriority|cn_regionkey|c_mktsegment|l_shipmode|l_linenumber|s_nationkey|p_brand|c_nationkey|p_container|p_size|l_quantity|p_type
+s01_sql4_0
+s01_sql4_1

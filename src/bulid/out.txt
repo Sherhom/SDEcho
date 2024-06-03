@@ -1,0 +1,782 @@
+nohup: ignoring input
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4252 373280 369028
+-1968 189244 191212
+1325 191387 190062
+337 4654 4317
+
+[Split   ] left order: 4 right order: 0
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, proj float );
+1/375
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority) order by proj0 desc
+[Midtable] there are totally 864 explanations
+[Result  ] left order need compute : 19
+[Topk    ] threshold : 0.654664
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=Manufacturer#2 ,o_orderpriority=null ,Score= 0.654664
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=2-HIGH ,Score= 0.648584
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,Score= 0.633934
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,Score= 0.601983
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,Score= 0.470899
+[Topk    ] d0norm : 4880.75
+[TimeCost] input data and encode: 310ms
+[TimeCost] compute proj and sum for all exps: 429ms
+[TimeCost] compute actual score of exps: 75ms
+[TimeCost] high exps: 0ms
+[TimeCost] total time cost: 814ms
+[LOGGING ] PATH : execfg001_x/1.txt k: 5 order :4
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4252 373280 369028
+-1968 189244 191212
+1325 191387 190062
+337 4654 4317
+
+[Split   ] left order: 5 right order: 1
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, l_shipinstruct int, proj float );
+1/1480
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipinstruct,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipinstruct) order by proj0 desc
+[Midtable] there are totally 4300 explanations
+[Result  ] left order need compute : 24
+[dimension] threshold : 0.601983 d0norm :4880.75
+[dimension] abssum :1644  d0norm - threshold * d0norm : 1942.62
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.601983
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,l_shipinstruct=null ,Score= 0.601983
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=DELIVER IN PERSON ,Score= 0.584174
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=null ,o_orderpriority=null ,l_shipinstruct=COLLECT COD ,Score= 0.570142
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=DELIVER IN PERSON ,Score= 0.502994
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=null ,Score= 0.470899
+[Topk    ] d0norm : 4880.75
+[TimeCost] input data and encode: 424ms
+[TimeCost] compute proj and sum for all exps: 756ms
+[TimeCost] compute actual score of exps: 101ms
+[TimeCost] high exps: 25ms
+[TimeCost] total time cost: 1306ms
+[LOGGING ] PATH : execfg001_x/1.txt k: 5 order :6
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4252 373280 369028
+-1968 189244 191212
+1325 191387 190062
+337 4654 4317
+
+[Split   ] left order: 6 right order: 2
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, cn_regionkey int, l_shipinstruct int, proj float );
+1/6228
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct) order by proj0 desc
+[Midtable] there are totally 24484 explanations
+[Result  ] left order need compute : 31
+[dimension] threshold : 0.560152 d0norm :4880.75
+[dimension] abssum :1148  d0norm - threshold * d0norm : 2146.79
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.560152 d0norm :4880.75
+[dimension] abssum :1644  d0norm - threshold * d0norm : 2146.79
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.560152
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=2-HIGH ,cn_regionkey=1 ,l_shipinstruct=null ,Score= 0.560152
+[Topk    ] o_orderstatus=O ,sn_regionkey=0 ,p_mfgr=null ,o_orderpriority=null ,cn_regionkey=2 ,l_shipinstruct=null ,Score= 0.555555
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,cn_regionkey=2 ,l_shipinstruct=null ,Score= 0.51701
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=DELIVER IN PERSON ,Score= 0.502994
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,Score= 0.470899
+[Topk    ] d0norm : 4880.75
+[TimeCost] input data and encode: 534ms
+[TimeCost] compute proj and sum for all exps: 2022ms
+[TimeCost] compute actual score of exps: 130ms
+[TimeCost] high exps: 51ms
+[TimeCost] total time cost: 2737ms
+[LOGGING ] PATH : execfg001_x/1.txt k: 5 order :8
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4252 373280 369028
+-1968 189244 191212
+1325 191387 190062
+337 4654 4317
+
+[Split   ] left order: 7 right order: 3
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, cn_regionkey int, l_shipinstruct int, c_mktsegment int, proj float );
+1/23321
+10001/23321
+20001/23321
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,c_mktsegment,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,c_mktsegment) order by proj0 desc
+[Midtable] there are totally 131895 explanations
+[Result  ] left order need compute : 43
+[dimension] threshold : 0.531527 d0norm :4880.75
+[dimension] abssum :1207  d0norm - threshold * d0norm : 2286.5
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.531527 d0norm :4880.75
+[dimension] abssum :1148  d0norm - threshold * d0norm : 2286.5
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.531527 d0norm :4880.75
+[dimension] abssum :1644  d0norm - threshold * d0norm : 2286.5
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.531527
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,Score= 0.531527
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,cn_regionkey=2 ,l_shipinstruct=null ,c_mktsegment=null ,Score= 0.51701
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,cn_regionkey=2 ,l_shipinstruct=null ,c_mktsegment=FURNITURE ,Score= 0.513732
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=DELIVER IN PERSON ,c_mktsegment=null ,Score= 0.502994
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,c_mktsegment=null ,Score= 0.470899
+[Topk    ] d0norm : 4880.75
+[TimeCost] input data and encode: 632ms
+[TimeCost] compute proj and sum for all exps: 6575ms
+[TimeCost] compute actual score of exps: 183ms
+[TimeCost] high exps: 79ms
+[TimeCost] total time cost: 7469ms
+[LOGGING ] PATH : execfg001_x/1.txt k: 5 order :10
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4252 373280 369028
+-1968 189244 191212
+1325 191387 190062
+337 4654 4317
+
+[Split   ] left order: 8 right order: 4
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, l_shipmode int, l_shipinstruct int, c_mktsegment int, cn_regionkey int, proj float );
+1/49958
+10001/49958
+20001/49958
+30001/49958
+40001/49958
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipmode,l_shipinstruct,c_mktsegment,cn_regionkey,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipmode,l_shipinstruct,c_mktsegment,cn_regionkey) order by proj0 desc
+[Midtable] there are totally 767097 explanations
+[Result  ] left order need compute : 46
+[dimension] threshold : 0.531527 d0norm :4880.75
+[dimension] abssum :1174  d0norm - threshold * d0norm : 2286.5
+[dimension] col now: l_receiptdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.531527 d0norm :4880.75
+[dimension] abssum :1207  d0norm - threshold * d0norm : 2286.5
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.531527 d0norm :4880.75
+[dimension] abssum :1148  d0norm - threshold * d0norm : 2286.5
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.531527 d0norm :4880.75
+[dimension] abssum :1644  d0norm - threshold * d0norm : 2286.5
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.531527
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,cn_regionkey=null ,Score= 0.531527
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=null ,cn_regionkey=2 ,Score= 0.51701
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=FURNITURE ,cn_regionkey=2 ,Score= 0.513732
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=DELIVER IN PERSON ,c_mktsegment=null ,cn_regionkey=null ,Score= 0.502994
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=null ,cn_regionkey=null ,Score= 0.470899
+[Topk    ] d0norm : 4880.75
+[TimeCost] input data and encode: 751ms
+[TimeCost] compute proj and sum for all exps: 18043ms
+[TimeCost] compute actual score of exps: 209ms
+[TimeCost] high exps: 119ms
+[TimeCost] total time cost: 19122ms
+[LOGGING ] PATH : execfg001_x/1.txt k: 5 order :12
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4252 373280 369028
+-1968 189244 191212
+1325 191387 190062
+337 4654 4317
+
+[Split   ] left order: 9 right order: 5
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, c_mktsegment int, l_shipinstruct int, l_linenumber int, cn_regionkey int, l_shipmode int, proj float );
+1/57510
+10001/57510
+20001/57510
+30001/57510
+40001/57510
+50001/57510
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,c_mktsegment,l_shipinstruct,l_linenumber,cn_regionkey,l_shipmode,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,c_mktsegment,l_shipinstruct,l_linenumber,cn_regionkey,l_shipmode) order by proj0 desc
+[Midtable] there are totally 3296460 explanations
+[Result  ] left order need compute : 44
+[dimension] threshold : 0.51701 d0norm :4880.75
+[dimension] abssum :2390  d0norm - threshold * d0norm : 2357.35
+[dimension] col now: p_retailprice
+[dimension] can not be pruned
+[dimension] threshold : 0.51701 d0norm :4880.75
+[dimension] abssum :1174  d0norm - threshold * d0norm : 2357.35
+[dimension] col now: l_receiptdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.51701 d0norm :4880.75
+[dimension] abssum :1207  d0norm - threshold * d0norm : 2357.35
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.51701 d0norm :4880.75
+[dimension] abssum :1148  d0norm - threshold * d0norm : 2357.35
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.51701 d0norm :4880.75
+[dimension] abssum :1644  d0norm - threshold * d0norm : 2357.35
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Midtable] execute sql:drop table if exists allLeafProjAndSum
+[Midtable] execute sql:create table  allLeafProjAndSum(p_retailprice int, abssum float );
+[Midtable] there are : 1099 leaf exps 
+1
+1001
+[Midtable] right order abs sum value of all leaf explantions computed
+[Midtable] execute cube sql now:select p_retailprice,sum(abssum) as abssum0 from allLeafProjAndSum group by cube(p_retailprice) order by abssum0 desc
+[Midtable] there are totally 1100 explanations
+========================================
+threshold : 0.51701 d0norm :4880.75
+abssum :2390 >= d0norm - threshold * d0norm : 2357.35
+now: 1/1100
+[Midtable] execute sql:drop table if exists allLeafProjAndSum
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, c_mktsegment int, l_shipinstruct int, l_linenumber int, cn_regionkey int, l_shipmode int, proj float );
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,c_mktsegment,l_shipinstruct,l_linenumber,cn_regionkey,l_shipmode,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,c_mktsegment,l_shipinstruct,l_linenumber,cn_regionkey,l_shipmode) order by proj0 desc
+[Midtable] there are totally 34494 explanations
+[Result  ] need compute : 0
+========================================
+========================================
+threshold : 0.51701 d0norm :4880.75
+abssum :2386 >= d0norm - threshold * d0norm : 2357.35
+now: 2/1100
+[Midtable] execute sql:drop table if exists allLeafProjAndSum
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, c_mktsegment int, l_shipinstruct int, l_linenumber int, cn_regionkey int, l_shipmode int, proj float );
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,c_mktsegment,l_shipinstruct,l_linenumber,cn_regionkey,l_shipmode,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,c_mktsegment,l_shipinstruct,l_linenumber,cn_regionkey,l_shipmode) order by proj0 desc
+[Midtable] there are totally 33022 explanations
+[Result  ] need compute : 0
+========================================
+========================================
+threshold : 0.51701 d0norm :4880.75
+abssum :2328 < d0norm - threshold * d0norm : 2357.35
+now: 3/1100
+========================================
+[Result  ] need down deeper : 2
+[Topk    ] threshold : 0.51701
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,c_mktsegment=null ,l_shipinstruct=null ,l_linenumber=null ,cn_regionkey=2 ,l_shipmode=null ,p_retailprice=null ,Score= 0.51701
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,c_mktsegment=FURNITURE ,l_shipinstruct=null ,l_linenumber=null ,cn_regionkey=2 ,l_shipmode=null ,p_retailprice=null ,Score= 0.513732
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,c_mktsegment=null ,l_shipinstruct=DELIVER IN PERSON ,l_linenumber=null ,cn_regionkey=null ,l_shipmode=null ,p_retailprice=null ,Score= 0.502994
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,c_mktsegment=null ,l_shipinstruct=null ,l_linenumber=4 ,cn_regionkey=null ,l_shipmode=null ,p_retailprice=null ,Score= 0.500632
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,c_mktsegment=null ,l_shipinstruct=null ,l_linenumber=null ,cn_regionkey=null ,l_shipmode=null ,p_retailprice=null ,Score= 0.470899
+[Topk    ] d0norm : 4880.75
+[TimeCost] input data and encode: 860ms
+[TimeCost] compute proj and sum for all exps: 34405ms
+[TimeCost] compute actual score of exps: 199ms
+[TimeCost] high exps: 5180ms
+[TimeCost] total time cost: 40644ms
+[LOGGING ] PATH : execfg001_x/1.txt k: 5 order :14
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.58104e+06 5.22679e+08 5.18098e+08
+-2.00839e+06 2.6517e+08 2.67178e+08
+692983 2.67644e+08 2.66951e+08
+564765 6.47478e+06 5.91002e+06
+
+[Split   ] left order: 4 right order: 0
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, proj float );
+1/375
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority) order by proj0 desc
+[Midtable] there are totally 864 explanations
+[Result  ] left order need compute : 22
+[Topk    ] threshold : 0.529845
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=2-HIGH ,Score= 0.529845
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,Score= 0.527236
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=Manufacturer#4 ,o_orderpriority=null ,Score= 0.523021
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=Manufacturer#2 ,o_orderpriority=null ,Score= 0.486825
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,Score= 0.418418
+[Topk    ] d0norm : 5.08121e+06
+[TimeCost] input data and encode: 325ms
+[TimeCost] compute proj and sum for all exps: 429ms
+[TimeCost] compute actual score of exps: 85ms
+[TimeCost] high exps: 1ms
+[TimeCost] total time cost: 840ms
+[LOGGING ] PATH : execfg001_x/2.txt k: 5 order :4
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.58104e+06 5.22679e+08 5.18098e+08
+-2.00839e+06 2.6517e+08 2.67178e+08
+692983 2.67644e+08 2.66951e+08
+564765 6.47478e+06 5.91002e+06
+
+[Split   ] left order: 5 right order: 1
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, l_shipinstruct int, proj float );
+1/1480
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipinstruct,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipinstruct) order by proj0 desc
+[Midtable] there are totally 4300 explanations
+[Result  ] left order need compute : 30
+[dimension] threshold : 0.506522 d0norm :5.08121e+06
+[dimension] abssum :2.32316e+06  d0norm - threshold * d0norm : 2.50747e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.506522
+[Topk    ] o_orderstatus=O ,sn_regionkey=0 ,p_mfgr=null ,o_orderpriority=null ,l_shipinstruct=COLLECT COD ,Score= 0.506522
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=NONE ,Score= 0.495822
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=Manufacturer#2 ,o_orderpriority=null ,l_shipinstruct=null ,Score= 0.486825
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=DELIVER IN PERSON ,Score= 0.479345
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=null ,Score= 0.418418
+[Topk    ] d0norm : 5.08121e+06
+[TimeCost] input data and encode: 438ms
+[TimeCost] compute proj and sum for all exps: 758ms
+[TimeCost] compute actual score of exps: 120ms
+[TimeCost] high exps: 24ms
+[TimeCost] total time cost: 1340ms
+[LOGGING ] PATH : execfg001_x/2.txt k: 5 order :6
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.58104e+06 5.22679e+08 5.18098e+08
+-2.00839e+06 2.6517e+08 2.67178e+08
+692983 2.67644e+08 2.66951e+08
+564765 6.47478e+06 5.91002e+06
+
+[Split   ] left order: 6 right order: 2
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, cn_regionkey int, l_shipinstruct int, proj float );
+1/6228
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct) order by proj0 desc
+[Midtable] there are totally 24484 explanations
+[Result  ] left order need compute : 45
+[dimension] threshold : 0.451837 d0norm :5.08121e+06
+[dimension] abssum :1.69213e+06  d0norm - threshold * d0norm : 2.78533e+06
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.451837 d0norm :5.08121e+06
+[dimension] abssum :2.32316e+06  d0norm - threshold * d0norm : 2.78533e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.451837
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,cn_regionkey=0 ,l_shipinstruct=null ,Score= 0.451837
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=5-LOW ,cn_regionkey=2 ,l_shipinstruct=null ,Score= 0.45134
+[Topk    ] o_orderstatus=O ,sn_regionkey=0 ,p_mfgr=null ,o_orderpriority=null ,cn_regionkey=2 ,l_shipinstruct=null ,Score= 0.45074
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=2-HIGH ,cn_regionkey=1 ,l_shipinstruct=null ,Score= 0.447912
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,Score= 0.418418
+[Topk    ] d0norm : 5.08121e+06
+[TimeCost] input data and encode: 546ms
+[TimeCost] compute proj and sum for all exps: 2030ms
+[TimeCost] compute actual score of exps: 180ms
+[TimeCost] high exps: 51ms
+[TimeCost] total time cost: 2807ms
+[LOGGING ] PATH : execfg001_x/2.txt k: 5 order :8
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.58104e+06 5.22679e+08 5.18098e+08
+-2.00839e+06 2.6517e+08 2.67178e+08
+692983 2.67644e+08 2.66951e+08
+564765 6.47478e+06 5.91002e+06
+
+[Split   ] left order: 7 right order: 3
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, cn_regionkey int, l_shipinstruct int, c_mktsegment int, proj float );
+1/23321
+10001/23321
+20001/23321
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,c_mktsegment,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,c_mktsegment) order by proj0 desc
+[Midtable] there are totally 131895 explanations
+[Result  ] left order need compute : 71
+[dimension] threshold : 0.450697 d0norm :5.08121e+06
+[dimension] abssum :1.70959e+06  d0norm - threshold * d0norm : 2.79113e+06
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.450697 d0norm :5.08121e+06
+[dimension] abssum :1.69213e+06  d0norm - threshold * d0norm : 2.79113e+06
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.450697 d0norm :5.08121e+06
+[dimension] abssum :2.32316e+06  d0norm - threshold * d0norm : 2.79113e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.450697
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,cn_regionkey=0 ,l_shipinstruct=null ,c_mktsegment=BUILDING ,Score= 0.450697
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=2-HIGH ,cn_regionkey=1 ,l_shipinstruct=null ,c_mktsegment=null ,Score= 0.447912
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,c_mktsegment=null ,Score= 0.418418
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,Score= 0.362584
+[Topk    ] o_orderstatus=null ,sn_regionkey=2 ,p_mfgr=null ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,Score= 0.360086
+[Topk    ] d0norm : 5.08121e+06
+[TimeCost] input data and encode: 649ms
+[TimeCost] compute proj and sum for all exps: 6608ms
+[TimeCost] compute actual score of exps: 291ms
+[TimeCost] high exps: 87ms
+[TimeCost] total time cost: 7635ms
+[LOGGING ] PATH : execfg001_x/2.txt k: 5 order :10
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.58104e+06 5.22679e+08 5.18098e+08
+-2.00839e+06 2.6517e+08 2.67178e+08
+692983 2.67644e+08 2.66951e+08
+564765 6.47478e+06 5.91002e+06
+
+[Split   ] left order: 8 right order: 4
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, l_shipmode int, l_shipinstruct int, c_mktsegment int, cn_regionkey int, proj float );
+1/49958
+10001/49958
+20001/49958
+30001/49958
+40001/49958
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipmode,l_shipinstruct,c_mktsegment,cn_regionkey,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipmode,l_shipinstruct,c_mktsegment,cn_regionkey) order by proj0 desc
+[Midtable] there are totally 767097 explanations
+[Result  ] left order need compute : 69
+[dimension] threshold : 0.418418 d0norm :5.08121e+06
+[dimension] abssum :1.70509e+06  d0norm - threshold * d0norm : 2.95514e+06
+[dimension] col now: l_receiptdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.418418 d0norm :5.08121e+06
+[dimension] abssum :1.70959e+06  d0norm - threshold * d0norm : 2.95514e+06
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.418418 d0norm :5.08121e+06
+[dimension] abssum :1.69213e+06  d0norm - threshold * d0norm : 2.95514e+06
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.418418 d0norm :5.08121e+06
+[dimension] abssum :2.32316e+06  d0norm - threshold * d0norm : 2.95514e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.418418
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=null ,cn_regionkey=null ,Score= 0.418418
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#4 ,o_orderpriority=null ,l_shipmode=AIR ,l_shipinstruct=null ,c_mktsegment=null ,cn_regionkey=null ,Score= 0.400111
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,cn_regionkey=null ,Score= 0.362584
+[Topk    ] o_orderstatus=null ,sn_regionkey=2 ,p_mfgr=null ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,cn_regionkey=null ,Score= 0.360086
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,l_shipmode=AIR ,l_shipinstruct=null ,c_mktsegment=null ,cn_regionkey=null ,Score= 0.213761
+[Topk    ] d0norm : 5.08121e+06
+[TimeCost] input data and encode: 765ms
+[TimeCost] compute proj and sum for all exps: 21076ms
+[TimeCost] compute actual score of exps: 304ms
+[TimeCost] high exps: 107ms
+[TimeCost] total time cost: 22252ms
+[LOGGING ] PATH : execfg001_x/2.txt k: 5 order :12
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.58104e+06 5.22679e+08 5.18098e+08
+-2.00839e+06 2.6517e+08 2.67178e+08
+692983 2.67644e+08 2.66951e+08
+564765 6.47478e+06 5.91002e+06
+
+[Split   ] left order: 10 right order: 4
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, l_linenumber int, l_shipinstruct int, l_shipmode int, cn_regionkey int, p_retailprice int, c_mktsegment int, proj float );
+1/59275
+10001/59275
+20001/59275
+30001/59275
+40001/59275
+50001/59275
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_linenumber,l_shipinstruct,l_shipmode,cn_regionkey,p_retailprice,c_mktsegment,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_linenumber,l_shipinstruct,l_shipmode,cn_regionkey,p_retailprice,c_mktsegment) order by proj0 desc
+[Midtable] there are totally 28442624 explanations
+[Result  ] left order need compute : 73
+[dimension] threshold : 0.418418 d0norm :5.08121e+06
+[dimension] abssum :1.70509e+06  d0norm - threshold * d0norm : 2.95514e+06
+[dimension] col now: l_receiptdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.418418 d0norm :5.08121e+06
+[dimension] abssum :1.70959e+06  d0norm - threshold * d0norm : 2.95514e+06
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.418418 d0norm :5.08121e+06
+[dimension] abssum :1.69213e+06  d0norm - threshold * d0norm : 2.95514e+06
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.418418 d0norm :5.08121e+06
+[dimension] abssum :2.32316e+06  d0norm - threshold * d0norm : 2.95514e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.418418
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=null ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=null ,Score= 0.418418
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#4 ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=AIR ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=null ,Score= 0.400111
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=null ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=HOUSEHOLD ,Score= 0.362584
+[Topk    ] o_orderstatus=null ,sn_regionkey=2 ,p_mfgr=null ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=null ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=HOUSEHOLD ,Score= 0.360086
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=AIR ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=null ,Score= 0.213761
+[Topk    ] d0norm : 5.08121e+06
+[TimeCost] input data and encode: 880ms
+[TimeCost] compute proj and sum for all exps: 145208ms
+[TimeCost] compute actual score of exps: 332ms
+[TimeCost] high exps: 113ms
+[TimeCost] total time cost: 146533ms
+[LOGGING ] PATH : execfg001_x/2.txt k: 5 order :14
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.25681e+06 4.96657e+08 4.924e+08
+-1.9464e+06 2.51938e+08 2.53884e+08
+527308 2.54262e+08 2.53735e+08
+542206 6.17023e+06 5.62803e+06
+
+[Split   ] left order: 4 right order: 0
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, proj float );
+1/375
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority) order by proj0 desc
+[Midtable] there are totally 864 explanations
+[Result  ] left order need compute : 24
+[Topk    ] threshold : 0.53709
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,Score= 0.53709
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=2-HIGH ,Score= 0.531482
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=Manufacturer#4 ,o_orderpriority=null ,Score= 0.500869
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=Manufacturer#2 ,o_orderpriority=null ,Score= 0.488978
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,Score= 0.424279
+[Topk    ] d0norm : 4.74141e+06
+[TimeCost] input data and encode: 325ms
+[TimeCost] compute proj and sum for all exps: 435ms
+[TimeCost] compute actual score of exps: 97ms
+[TimeCost] high exps: 1ms
+[TimeCost] total time cost: 858ms
+[LOGGING ] PATH : execfg001_x/3.txt k: 5 order :4
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.25681e+06 4.96657e+08 4.924e+08
+-1.9464e+06 2.51938e+08 2.53884e+08
+527308 2.54262e+08 2.53735e+08
+542206 6.17023e+06 5.62803e+06
+
+[Split   ] left order: 5 right order: 1
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, l_shipinstruct int, proj float );
+1/1480
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipinstruct,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipinstruct) order by proj0 desc
+[Midtable] there are totally 4300 explanations
+[Result  ] left order need compute : 29
+[dimension] threshold : 0.500869 d0norm :4.74141e+06
+[dimension] abssum :2.21653e+06  d0norm - threshold * d0norm : 2.36659e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.500869
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=Manufacturer#4 ,o_orderpriority=null ,l_shipinstruct=null ,Score= 0.500869
+[Topk    ] o_orderstatus=null ,sn_regionkey=0 ,p_mfgr=Manufacturer#2 ,o_orderpriority=null ,l_shipinstruct=null ,Score= 0.488978
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=NONE ,Score= 0.485002
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=DELIVER IN PERSON ,Score= 0.482143
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipinstruct=null ,Score= 0.424279
+[Topk    ] d0norm : 4.74141e+06
+[TimeCost] input data and encode: 437ms
+[TimeCost] compute proj and sum for all exps: 771ms
+[TimeCost] compute actual score of exps: 118ms
+[TimeCost] high exps: 24ms
+[TimeCost] total time cost: 1350ms
+[LOGGING ] PATH : execfg001_x/3.txt k: 5 order :6
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.25681e+06 4.96657e+08 4.924e+08
+-1.9464e+06 2.51938e+08 2.53884e+08
+527308 2.54262e+08 2.53735e+08
+542206 6.17023e+06 5.62803e+06
+
+[Split   ] left order: 6 right order: 2
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, cn_regionkey int, l_shipinstruct int, proj float );
+1/6228
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct) order by proj0 desc
+[Midtable] there are totally 24484 explanations
+[Result  ] left order need compute : 50
+[dimension] threshold : 0.459982 d0norm :4.74141e+06
+[dimension] abssum :1.6242e+06  d0norm - threshold * d0norm : 2.56044e+06
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.459982 d0norm :4.74141e+06
+[dimension] abssum :2.21653e+06  d0norm - threshold * d0norm : 2.56044e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.459982
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,cn_regionkey=0 ,l_shipinstruct=null ,Score= 0.459982
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,cn_regionkey=0 ,l_shipinstruct=null ,Score= 0.459241
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=5-LOW ,cn_regionkey=2 ,l_shipinstruct=null ,Score= 0.456956
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=2-HIGH ,cn_regionkey=1 ,l_shipinstruct=null ,Score= 0.456719
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,Score= 0.424279
+[Topk    ] d0norm : 4.74141e+06
+[TimeCost] input data and encode: 544ms
+[TimeCost] compute proj and sum for all exps: 1996ms
+[TimeCost] compute actual score of exps: 198ms
+[TimeCost] high exps: 51ms
+[TimeCost] total time cost: 2789ms
+[LOGGING ] PATH : execfg001_x/3.txt k: 5 order :8
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.25681e+06 4.96657e+08 4.924e+08
+-1.9464e+06 2.51938e+08 2.53884e+08
+527308 2.54262e+08 2.53735e+08
+542206 6.17023e+06 5.62803e+06
+
+[Split   ] left order: 7 right order: 3
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, cn_regionkey int, l_shipinstruct int, c_mktsegment int, proj float );
+1/23321
+10001/23321
+20001/23321
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,c_mktsegment,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,cn_regionkey,l_shipinstruct,c_mktsegment) order by proj0 desc
+[Midtable] there are totally 131895 explanations
+[Result  ] left order need compute : 74
+[dimension] threshold : 0.454007 d0norm :4.74141e+06
+[dimension] abssum :1.6266e+06  d0norm - threshold * d0norm : 2.58878e+06
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.454007 d0norm :4.74141e+06
+[dimension] abssum :1.6242e+06  d0norm - threshold * d0norm : 2.58878e+06
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.454007 d0norm :4.74141e+06
+[dimension] abssum :2.21653e+06  d0norm - threshold * d0norm : 2.58878e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.454007
+[Topk    ] o_orderstatus=O ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=4-NOT SPECIFIED ,cn_regionkey=0 ,l_shipinstruct=null ,c_mktsegment=BUILDING ,Score= 0.454007
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,cn_regionkey=3 ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,Score= 0.432029
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,c_mktsegment=null ,Score= 0.424279
+[Topk    ] o_orderstatus=null ,sn_regionkey=2 ,p_mfgr=null ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,Score= 0.347824
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,cn_regionkey=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,Score= 0.345511
+[Topk    ] d0norm : 4.74141e+06
+[TimeCost] input data and encode: 651ms
+[TimeCost] compute proj and sum for all exps: 6602ms
+[TimeCost] compute actual score of exps: 299ms
+[TimeCost] high exps: 78ms
+[TimeCost] total time cost: 7630ms
+[LOGGING ] PATH : execfg001_x/3.txt k: 5 order :10
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.25681e+06 4.96657e+08 4.924e+08
+-1.9464e+06 2.51938e+08 2.53884e+08
+527308 2.54262e+08 2.53735e+08
+542206 6.17023e+06 5.62803e+06
+
+[Split   ] left order: 8 right order: 4
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, l_shipmode int, l_shipinstruct int, c_mktsegment int, cn_regionkey int, proj float );
+1/49958
+10001/49958
+20001/49958
+30001/49958
+40001/49958
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipmode,l_shipinstruct,c_mktsegment,cn_regionkey,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_shipmode,l_shipinstruct,c_mktsegment,cn_regionkey) order by proj0 desc
+[Midtable] there are totally 767097 explanations
+[Result  ] left order need compute : 72
+[dimension] threshold : 0.424279 d0norm :4.74141e+06
+[dimension] abssum :1.62598e+06  d0norm - threshold * d0norm : 2.72973e+06
+[dimension] col now: l_receiptdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.424279 d0norm :4.74141e+06
+[dimension] abssum :1.6266e+06  d0norm - threshold * d0norm : 2.72973e+06
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.424279 d0norm :4.74141e+06
+[dimension] abssum :1.6242e+06  d0norm - threshold * d0norm : 2.72973e+06
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.424279 d0norm :4.74141e+06
+[dimension] abssum :2.21653e+06  d0norm - threshold * d0norm : 2.72973e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.424279
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=null ,cn_regionkey=null ,Score= 0.424279
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#4 ,o_orderpriority=null ,l_shipmode=AIR ,l_shipinstruct=null ,c_mktsegment=null ,cn_regionkey=null ,Score= 0.414457
+[Topk    ] o_orderstatus=null ,sn_regionkey=2 ,p_mfgr=null ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,cn_regionkey=null ,Score= 0.347824
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_shipmode=null ,l_shipinstruct=null ,c_mktsegment=HOUSEHOLD ,cn_regionkey=null ,Score= 0.345511
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,l_shipmode=AIR ,l_shipinstruct=null ,c_mktsegment=null ,cn_regionkey=null ,Score= 0.215304
+[Topk    ] d0norm : 4.74141e+06
+[TimeCost] input data and encode: 763ms
+[TimeCost] compute proj and sum for all exps: 18031ms
+[TimeCost] compute actual score of exps: 309ms
+[TimeCost] high exps: 108ms
+[TimeCost] total time cost: 19211ms
+[LOGGING ] PATH : execfg001_x/3.txt k: 5 order :12
+=================================
+[Connect ] connect datebase success
+[Input   ] input data finished, total : 59288 rows, table1 : 29711 rows, table2 : 29577 rows 
+maxtime: 3
+ [d0]   [t1]    [t2]
+4.25681e+06 4.96657e+08 4.924e+08
+-1.9464e+06 2.51938e+08 2.53884e+08
+527308 2.54262e+08 2.53735e+08
+542206 6.17023e+06 5.62803e+06
+
+[Split   ] left order: 10 right order: 4
+[Midtable] execute sql:create table  allLeafProjAndSum(o_orderstatus int, sn_regionkey int, p_mfgr int, o_orderpriority int, l_linenumber int, l_shipinstruct int, l_shipmode int, cn_regionkey int, p_retailprice int, c_mktsegment int, proj float );
+1/59275
+10001/59275
+20001/59275
+30001/59275
+40001/59275
+50001/59275
+[Midtable] proj value of all leaf explantions computed
+[Midtable] execute cube sql now:select o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_linenumber,l_shipinstruct,l_shipmode,cn_regionkey,p_retailprice,c_mktsegment,sum(proj) as proj0 from allLeafProjAndSum group by cube(o_orderstatus,sn_regionkey,p_mfgr,o_orderpriority,l_linenumber,l_shipinstruct,l_shipmode,cn_regionkey,p_retailprice,c_mktsegment) order by proj0 desc
+[Midtable] there are totally 28442624 explanations
+[Result  ] left order need compute : 77
+[dimension] threshold : 0.424279 d0norm :4.74141e+06
+[dimension] abssum :1.62598e+06  d0norm - threshold * d0norm : 2.72973e+06
+[dimension] col now: l_receiptdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.424279 d0norm :4.74141e+06
+[dimension] abssum :1.6266e+06  d0norm - threshold * d0norm : 2.72973e+06
+[dimension] col now: l_shipdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.424279 d0norm :4.74141e+06
+[dimension] abssum :1.6242e+06  d0norm - threshold * d0norm : 2.72973e+06
+[dimension] col now: l_commitdate
+[dimension]  can be pruned 
+[dimension] threshold : 0.424279 d0norm :4.74141e+06
+[dimension] abssum :2.21653e+06  d0norm - threshold * d0norm : 2.72973e+06
+[dimension] col now: o_orderdate
+[dimension]  can be pruned 
+[Topk    ] threshold : 0.424279
+[Topk    ] o_orderstatus=null ,sn_regionkey=1 ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=null ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=null ,Score= 0.424279
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#4 ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=AIR ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=null ,Score= 0.414457
+[Topk    ] o_orderstatus=null ,sn_regionkey=2 ,p_mfgr=null ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=null ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=HOUSEHOLD ,Score= 0.347824
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=Manufacturer#3 ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=null ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=HOUSEHOLD ,Score= 0.345511
+[Topk    ] o_orderstatus=null ,sn_regionkey=null ,p_mfgr=null ,o_orderpriority=null ,l_linenumber=null ,l_shipinstruct=null ,l_shipmode=AIR ,cn_regionkey=null ,p_retailprice=null ,c_mktsegment=null ,Score= 0.215304
+[Topk    ] d0norm : 4.74141e+06
+[TimeCost] input data and encode: 873ms
+[TimeCost] compute proj and sum for all exps: 145443ms
+[TimeCost] compute actual score of exps: 343ms
+[TimeCost] high exps: 105ms
+[TimeCost] total time cost: 146764ms
+[LOGGING ] PATH : execfg001_x/3.txt k: 5 order :14
+=================================

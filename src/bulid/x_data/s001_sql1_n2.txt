@@ -1,0 +1,3 @@
+l_orderkey|l_partkey|l_suppkey|l_linenumber|l_linestatus|l_shipdate|l_commitdate|l_receiptdate|l_shipinstruct
+s001_sql1_n2
+s001_sql1_n2_noise

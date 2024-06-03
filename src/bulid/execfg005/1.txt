@@ -1,0 +1,3 @@
+o_orderstatus|l_shipinstruct|sn_regionkey|p_mfgr|o_orderpriority|cn_regionkey|c_mktsegment|l_shipmode|l_linenumber|l_tax|o_orderdate|l_commitdate|l_shipdate|l_receiptdate
+s005_sql1_0
+s005_sql1_1

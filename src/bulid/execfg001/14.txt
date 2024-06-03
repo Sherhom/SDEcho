@@ -1,0 +1,3 @@
+l_linestatus|o_orderstatus|l_returnflag|l_shipinstruct|sn_regionkey|p_mfgr|o_orderpriority|cn_regionkey|c_mktsegment|l_shipmode|l_linenumber|l_tax|l_discount|s_nationkey|p_brand|c_nationkey
+s001_sql14_0
+s001_sql14_1
