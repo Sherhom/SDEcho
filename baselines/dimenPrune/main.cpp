@@ -10,11 +10,11 @@
 using namespace std;
 
 //database-config
-const char* hostaddr = "localhost";
-const char* port = "5438";
-const char* dbname = "tpchlzk";
-const char* user = "yf";
-const char* password = "qwerpoiu";
+const char* hostaddr = "*";
+const char* port = "*";
+const char* dbname = "*";
+const char* user = "*";
+const char* password = "*";
 
 /*
  SELECT  table1Name TRENDIFF table2Name
