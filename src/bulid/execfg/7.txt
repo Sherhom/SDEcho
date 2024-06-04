@@ -1,3 +1,0 @@
-o_orderstatus|cn_regionkey|c_mktsegment|c_nationkey|o_clerk|c_acctbal|o_custkey
-s01_sql7_0
-s01_sql7_1

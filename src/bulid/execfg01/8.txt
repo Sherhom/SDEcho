@@ -1,3 +1,0 @@
-l_linestatus|o_orderstatus|l_returnflag|l_shipinstruct|p_mfgr|o_orderpriority|cn_regionkey|c_mktsegment|l_shipmode|l_linenumber|l_tax|s_nationkey|p_brand|p_container|p_size|l_quantity
-s01_sql8_0
-s01_sql8_1

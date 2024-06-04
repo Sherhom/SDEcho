@@ -1,3 +1,0 @@
-mother_age|mother_education|father_age|father_education|birth_place|payment_source|
-nat2021_1_3
-nat2022_1_3

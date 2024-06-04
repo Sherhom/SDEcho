@@ -1,3 +1,0 @@
-o_orderstatus|sn_regionkey|p_mfgr|o_orderpriority|o_orderdate|l_shipinstruct|l_commitdate|cn_regionkey|l_shipdate|c_mktsegment|l_receiptdate|l_shipmode|p_retailprice|l_linenumber|l_tax
-s0001_sql1_0_x
-s0001_sql1_1_x
