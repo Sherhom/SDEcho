@@ -1,8 +1,0 @@
-{
-    "x":["c_mktsegment"],
-    "target":"sum(l_linestatus)",
-    "table":"flat_table",
-    "condition":"c_mktsegment = 1",
-    "dimension":["l_partkey","l_suppkey","l_returnflag","l_shipmode","o_orderstatus","o_orderpriority","c_custkey","c_nationkey"],
-    "new value": -1
-}

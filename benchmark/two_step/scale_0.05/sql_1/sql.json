@@ -1,8 +1,0 @@
-{
-    "x":["l_shipmode"],
-    "target":"sum(l_returnflag)",
-    "table":"flat_table",
-    "condition":"l_shipmode = 1",
-    "dimension":["l_orderkey","l_partkey","l_linestatus","l_suppkey","l_shipinstruct"],
-    "new value": -1
-}

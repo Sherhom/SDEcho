@@ -1,8 +1,0 @@
-{
-    "x":["p_mfgr"],
-    "target":"sum(l_shipmode)",
-    "table":"flat_table",
-    "condition":"p_mfgr = 1",
-    "dimension":["l_partkey","l_suppkey","l_linestatus","l_returnflag","p_brand","p_type","p_size","p_container"],
-    "new value": -1
-}

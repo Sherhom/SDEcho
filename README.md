@@ -14,9 +14,24 @@ We introduced a novel framework for explanation searching, SDEcho, which address
 
 - `src/` - contains all the files necessary to the implementation of SDEcho.
 
+## SDEcho Compiling and Running
+
+```
+# compile
+cd src
+mkdir build
+cd build
+cmake ..
+make
+
+# 
+
+```
+
 ## Benchmark
     ```
-    #Initialize three databases from TPC-H: 'origin' for original data, 'tpch_rq1' for data after insertion of patterns and 'noise' where the inserted patterns are selected from. Notice that databases 'origin' and 'tpch_rq1' share the same scale while the scale of 'noise' should be larger. Use the following sqls to import data, change the scale size to import TPC-H data at different scales. Modify the database connection information in the file 'benchmark/RQ1/connect.py'
+    #Initialize three databases from TPC-H: 'origin' for original data, 'tpch_rq1' for data after insertion of patterns and 'noise' where the inserted patterns are selected from. Notice that databases 'origin' and 'tpch_rq1' share the same scale while the scale of 'noise' should be larger. 
+    #Use the following sqls to import data, change the scale size to import TPC-H data at different scales. Modify the database connection information in the file 'benchmark/RQ1/connect.py'
     copy region from './benchmark/TPC-H/scale_0.001/region.tbl' with delimiter as '|' NULL '';
     copy nation from './benchmark/TPC-H/scale_0.001/nation.tbl' with delimiter as '|' NULL '';
     copy partsupp from './benchmark/TPC-H/scale_0.001/partsupp.tbl' with delimiter as '|' NULL '';
@@ -27,7 +42,7 @@ We introduced a novel framework for explanation searching, SDEcho, which address
     copy supplier from './benchmark/TPC-H/scale_0.001/supplier.tbl' with delimiter as '|' NULL ''; 
     ```
     ```
-    #generate noise for a specific sql
+    #generate inserted patterns for a specific sql
     python benchmark/RQ1/dbgen.py
     ```
 
@@ -39,16 +54,3 @@ We introduced a novel framework for explanation searching, SDEcho, which address
     ```
 
 
-
-## Compiling and Running
-
-```
-# compile
-mkdir build
-cd build
-cmake ..
-make
-
-# 
-
-```
