@@ -1,4 +1,0 @@
-o_custkey|cn_regionkey|c_mktsegment|l_commitdate|l_shipmode|o_clerk|l_partkey
-s01_test_0
-s01_test_1
-cn_regionkey|c_mktsegment|l_shipmode|o_clerk|l_commitdate|o_custkey|l_partkey
