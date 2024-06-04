@@ -1,3 +1,0 @@
-l_orderkey|l_partkey|l_suppkey|l_returnflag|l_shipinstruct|l_shipmode|o_orderstatus|o_orderdate|o_orderpriority|o_shippriority|c_custkey|c_nationkey
-s0001_sql2_n2
-s0001_sql2_n2_noise
