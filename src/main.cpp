@@ -11,10 +11,10 @@ using namespace std;
 
 //database-config
 const char* hostaddr = "localhost";
-const char* port = "5438";
-const char* dbname = "tpchlzk";
-const char* user = "yf";
-const char* password = "qwerpoiu";
+const char* port = "*";
+const char* dbname = "*";
+const char* user = "*";
+const char* password = "*";
 
 /*
  SELECT  table1Name TRENDIFF table2Name
@@ -27,7 +27,7 @@ const char* password = "qwerpoiu";
 string timeColName = "groupcol";	//name of time column
 string aggColName = "aggcol";		//name of aggragated column
 vector<string> focusColNames ;		//the columns to find explanations
-string aggFunc = "count";					//aggragate function name:count sum only now
+string aggFunc = "count";					//aggragate function
 string table1Name ;		//name of the first table
 string table2Name ;		//name of the second table
 int k = 10;								//the number of explanations you want to get
