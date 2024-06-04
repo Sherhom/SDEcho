@@ -67,7 +67,7 @@ void Stringsplit(const string& str, const char split, vector<string>& res)
 
 int main(int argc,char* argv[]) {
 	
-	string path = "test1.txt";
+	string path = "test.txt";
 	int order_int = 6;
 	
 	if (argc <= 2) {
