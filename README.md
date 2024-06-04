@@ -6,11 +6,11 @@ We introduced a novel framework for explanation searching, SDEcho, which address
 
 ## Directory Layout
 
-- `baselines/` - contains all the baselines mentioned in the paper.
+- `baselines/` - contains all pruning method baselines mentioned in the paper.
 
-- `benchmark/` - contains .
+- `benchmark/` - contains all the files necessary to the implementation related to benchmark generation and explanation confidence evaluation mentioned in the paper.
 
-- `data/` - contains the formated data for example.
+- `data/` - contains the formated data and queries used for efficiency evaluation for example.
 
 - `src/` - contains all the files necessary to the implementation of SDEcho.
 
