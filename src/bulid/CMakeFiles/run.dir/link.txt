@@ -1,1 +1,0 @@
-/usr/local/gcc-11/bin/g++ CMakeFiles/run.dir/main.cpp.o CMakeFiles/run.dir/pgsql.cpp.o CMakeFiles/run.dir/table.cpp.o CMakeFiles/run.dir/trendiff.cpp.o -o run  -Wl,-rpath,/home/yf/pg14/lib /home/yf/pg14/lib/libpq.so 
