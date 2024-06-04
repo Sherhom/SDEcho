@@ -1,0 +1,14 @@
+{
+    "fp": {
+        "cols": [],
+        "vals": []
+    },
+    "dp": {
+        "col": "l_shipmode",
+        "vals": [-1, 1]
+    },
+    "measure": {
+        "col": "l_returnflag",
+        "func": "sum"
+    }
+}

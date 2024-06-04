@@ -1,0 +1,7 @@
+{
+    "x":["ps_partkey"],
+    "target":"sum(ps_supplycost * ps_availqty)",
+    "table":"flat_table",
+    "condition":"n_name = 'UNITED STATES'",
+    "dimension":["ps_partkey","ps_suppkey","n_nationkey"]
+}

@@ -1,0 +1,7 @@
+{
+    "x":["l_partkey"],
+    "target":"100.00 * sum(case when p_type like 'PROMO%' then l_extendedprice * (1 - l_discount) else 0 end) / sum(l_extendedprice * (1 - l_discount))",
+    "table":"flat_table",
+    "condition":"l_shipdate >= date '1995-09-01' and l_shipdate < date '1995-09-01' + interval '1' month",
+    "dimension":["l_orderkey","l_partkey","l_suppkey","l_linestatus","l_returnflag","l_shipmode","l_shipdate","l_commitdate","l_receiptdate","p_mfgr","p_brand","p_type","p_size","p_container"]
+}

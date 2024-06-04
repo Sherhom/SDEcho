@@ -1,0 +1,14 @@
+{
+    "fp": {
+        "cols": [],
+        "vals": []
+    },
+    "dp": {
+        "col": "c_mktsegment",
+        "vals": [-1, 1]
+    },
+    "measure": {
+        "col": "l_linestatus",
+        "func": "sum"
+    }
+}

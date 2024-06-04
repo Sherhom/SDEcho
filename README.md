@@ -15,9 +15,30 @@ We introduced a novel framework for explanation searching, SDEcho, which address
 - `src/` - contains all the files necessary to the implementation of SDEcho.
 
 ## Benchmark
+1. RQ1 benchmark
+    a. Initialize three databases from TPC-H: 'origin' for original data, 'tpch_rq1' for data after insertion of patterns and 'noise' where the inserted patterns are selected from. Notice that databases 'origin' and 'tpch_rq1' share the same scale while the scale of 'noise' should be larger. Use the following sqls to import data, change the scale size to import TPC-H data at different scales. Modify the database connection information in the file 'benchmark/RQ1/connect.py'
+        copy region from './benchmark/TPC-H/scale_0.001/region.tbl' with delimiter as '|' NULL '';
+        copy nation from './benchmark/TPC-H/scale_0.001/nation.tbl' with delimiter as '|' NULL '';
+        copy partsupp from './benchmark/TPC-H/scale_0.001/partsupp.tbl' with delimiter as '|' NULL '';
+        copy customer from './benchmark/TPC-H/scale_0.001/customer.tbl' with delimiter as '|' NULL '';
+        copy lineitem from './benchmark/TPC-H/scale_0.001/lineitem.tbl' with delimiter as '|' NULL '';
+        copy orders from './benchmark/TPC-H/scale_0.001/orders.tbl' with delimiter as '|' NULL '';
+        copy part from './benchmark/TPC-H/scale_0.001/part.tbl' with delimiter as '|' NULL '';
+        copy supplier from './benchmark/TPC-H/scale_0.001/supplier.tbl' with delimiter as '|' NULL '';
+    b. run 'python benchmark/RQ1/dbgen.py' to generate noise for a specific sql
+
+2. Two step method benchmark
+    a. Initialize three databases in the same way as above: 'xdata_ori', 'xdata', 'xdata_noise'. Modify the database connection information in the file 'benchmark/two_step/connect.py'
+    b. run 'python benchmark/two_step/XDgen.py' to generate noise for a specific sql
 
 
 ## Explanation Confidence Evaluation
+1. RQ1
+    python benchmark/RQ1/explainEngine.py
+
+2. Two step method
+    XInsight: python baselines/two_step_method/XInsight/src/run.py
+    pca: python baselines/two_step_method/pca.py
 
 
 

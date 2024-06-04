@@ -1,0 +1,7 @@
+{
+    "x":["p_brand","p_type","p_size"],
+    "target":"count(distinct ps_suppkey)",
+    "table":"flat_table",
+    "condition":"p_brand <> 'Brand#45' and p_type not like 'MEDIUM POLISHED%' and p_size in (49, 14, 23, 45, 19, 3, 36, 9) and ps_suppkey not in (select s_suppkey from supplier where s_comment like '%Customer%Complaints%')",
+    "dimension":["ps_partkey","ps_suppkey","p_mfgr","p_brand","p_type","p_size","p_container"]
+}

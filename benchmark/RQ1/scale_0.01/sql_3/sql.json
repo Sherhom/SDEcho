@@ -1,0 +1,7 @@
+{
+    "x":["l_orderkey","o_orderdate","o_shippriority"],
+    "target":"sum(l_extendedprice * (1 - l_discount))",
+    "table":"flat_table",
+    "condition":"c_mktsegment = 'BUILDING' and o_orderdate < date '1995-03-15' and l_shipdate > date '1995-03-15'",
+    "dimension":["l_orderkey","l_partkey","l_suppkey","l_linestatus","l_returnflag","l_shipmode","o_orderstatus","o_orderpriority","c_custkey","c_mktsegment"]
+}
