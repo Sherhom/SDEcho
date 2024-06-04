@@ -18,7 +18,8 @@ We introduced a novel framework for explanation searching, SDEcho, which address
 ```
 #Use the following sql to import the data in "data/mini_sample_data" into the database:
 copy table_name from file_name with delimiter as ',' NULL ''; 
-for example:
+
+#for example:
 copy nat2021_01 from 'data/mini_sample_data/nat2021_01' with delimiter as ',' NULL ''; 
 
 #Configure database information in "src/main.cpp", which are "port", "dbname", "user" and "password".
@@ -41,6 +42,13 @@ cd src
 sh test.sh
 
 ```
+
+## Baselines Compiling and Running
+```
+#All baselines are compiled and run in the same way as SDEcho.
+
+```
+
 
 ## Benchmark
 ```
