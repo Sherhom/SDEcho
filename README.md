@@ -17,3 +17,13 @@ We introduced a novel framework for explanation searching, SDEcho, which address
 
 ## Compiling and Running
 
+```
+# compile
+mkdir build
+cd build
+cmake ..
+make
+
+# 
+
+```
