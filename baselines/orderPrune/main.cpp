@@ -27,7 +27,7 @@ const char* password = "*";
 string timeColName = "groupcol";		//name of time column
 string aggColName = "aggcol";		//name of aggragated column
 vector<string> focusColNames ;		//the columns to find explanations
-string aggFunc = "sum";					//aggragate function name:count sum only now
+string aggFunc = "sum";					
 string table1Name ;		//name of the first table
 string table2Name ;		//name of the second table
 int k = 5;								//the number of explanations you want to get
