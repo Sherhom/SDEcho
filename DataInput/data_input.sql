@@ -1,0 +1,372 @@
+-- !!! NOTE: must change all the path '/PATH' to the parent path of dir DataInput 
+
+--input data for CMS dataset
+
+DELETE FROM cms_2021_x;
+COPY cms_2021_x FROM '/PATH/DataInput/CSVdata/cms_2021_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM cms_2022_x;
+COPY cms_2022_x FROM '/PATH/DataInput/CSVdata/cms_2022_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+--input data for NAT dataset
+
+DELETE FROM nat2021_x_1;
+COPY nat2021_x_1 FROM '/PATH/DataInput/CSVdata/nat2021_x_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM nat2022_x_1;
+COPY nat2022_x_1 FROM '/PATH/DataInput/CSVdata/nat2022_x_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+
+--input data for TPCH scale = 0.1
+
+DELETE FROM s01_sql1_0;
+COPY s01_sql1_0 FROM '/PATH/DataInput/CSVdata/s01_sql1_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql2_0;
+COPY s01_sql2_0 FROM '/PATH/DataInput/CSVdata/s01_sql2_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql3_0;
+COPY s01_sql3_0 FROM '/PATH/DataInput/CSVdata/s01_sql3_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql4_0;
+COPY s01_sql4_0 FROM '/PATH/DataInput/CSVdata/s01_sql4_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql5_0;
+COPY s01_sql5_0 FROM '/PATH/DataInput/CSVdata/s01_sql5_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql6_0;
+COPY s01_sql6_0 FROM '/PATH/DataInput/CSVdata/s01_sql6_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql7_0;
+COPY s01_sql7_0 FROM '/PATH/DataInput/CSVdata/s01_sql7_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql8_0;
+COPY s01_sql8_0 FROM '/PATH/DataInput/CSVdata/s01_sql8_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql9_0;
+COPY s01_sql9_0 FROM '/PATH/DataInput/CSVdata/s01_sql9_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql10_0;
+COPY s01_sql10_0 FROM '/PATH/DataInput/CSVdata/s01_sql10_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql11_0;
+COPY s01_sql11_0 FROM '/PATH/DataInput/CSVdata/s01_sql11_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql12_0;
+COPY s01_sql12_0 FROM '/PATH/DataInput/CSVdata/s01_sql12_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql13_0;
+COPY s01_sql13_0 FROM '/PATH/DataInput/CSVdata/s01_sql13_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql14_0;
+COPY s01_sql14_0 FROM '/PATH/DataInput/CSVdata/s01_sql14_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+
+DELETE FROM s01_sql1_1;
+COPY s01_sql1_1 FROM '/PATH/DataInput/CSVdata/s01_sql1_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql2_1;
+COPY s01_sql2_1 FROM '/PATH/DataInput/CSVdata/s01_sql2_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql3_1;
+COPY s01_sql3_1 FROM '/PATH/DataInput/CSVdata/s01_sql3_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql4_1;
+COPY s01_sql4_1 FROM '/PATH/DataInput/CSVdata/s01_sql4_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql5_1;
+COPY s01_sql5_1 FROM '/PATH/DataInput/CSVdata/s01_sql5_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql6_1;
+COPY s01_sql6_1 FROM '/PATH/DataInput/CSVdata/s01_sql6_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql7_1;
+COPY s01_sql7_1 FROM '/PATH/DataInput/CSVdata/s01_sql7_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql8_1;
+COPY s01_sql8_1 FROM '/PATH/DataInput/CSVdata/s01_sql8_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql9_1;
+COPY s01_sql9_1 FROM '/PATH/DataInput/CSVdata/s01_sql9_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql10_1;
+COPY s01_sql10_1 FROM '/PATH/DataInput/CSVdata/s01_sql10_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql11_1;
+COPY s01_sql11_1 FROM '/PATH/DataInput/CSVdata/s01_sql11_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql12_1;
+COPY s01_sql12_1 FROM '/PATH/DataInput/CSVdata/s01_sql12_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql13_1;
+COPY s01_sql13_1 FROM '/PATH/DataInput/CSVdata/s01_sql13_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql14_1;
+COPY s01_sql14_1 FROM '/PATH/DataInput/CSVdata/s01_sql14_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql1_0_x;
+COPY s01_sql1_0_x FROM '/PATH/DataInput/CSVdata/s01_sql1_0_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql2_0_x;
+COPY s01_sql2_0_x FROM '/PATH/DataInput/CSVdata/s01_sql2_0_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql3_0_x;
+COPY s01_sql3_0_x FROM '/PATH/DataInput/CSVdata/s01_sql3_0_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql1_1_x;
+COPY s01_sql1_1_x FROM '/PATH/DataInput/CSVdata/s01_sql1_1_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql2_1_x;
+COPY s01_sql2_1_x FROM '/PATH/DataInput/CSVdata/s01_sql2_1_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s01_sql3_1_x;
+COPY s01_sql3_1_x FROM '/PATH/DataInput/CSVdata/s01_sql3_1_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+-- input data for TPCH scale = 0.01
+
+DELETE FROM s001_sql1_0;
+COPY s001_sql1_0 FROM '/PATH/DataInput/CSVdata/s001_sql1_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql2_0;
+COPY s001_sql2_0 FROM '/PATH/DataInput/CSVdata/s001_sql2_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql3_0;
+COPY s001_sql3_0 FROM '/PATH/DataInput/CSVdata/s001_sql3_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql4_0;
+COPY s001_sql4_0 FROM '/PATH/DataInput/CSVdata/s001_sql4_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql5_0;
+COPY s001_sql5_0 FROM '/PATH/DataInput/CSVdata/s001_sql5_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql6_0;
+COPY s001_sql6_0 FROM '/PATH/DataInput/CSVdata/s001_sql6_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql7_0;
+COPY s001_sql7_0 FROM '/PATH/DataInput/CSVdata/s001_sql7_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql8_0;
+COPY s001_sql8_0 FROM '/PATH/DataInput/CSVdata/s001_sql8_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql9_0;
+COPY s001_sql9_0 FROM '/PATH/DataInput/CSVdata/s001_sql9_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql10_0;
+COPY s001_sql10_0 FROM '/PATH/DataInput/CSVdata/s001_sql10_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql11_0;
+COPY s001_sql11_0 FROM '/PATH/DataInput/CSVdata/s001_sql11_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql12_0;
+COPY s001_sql12_0 FROM '/PATH/DataInput/CSVdata/s001_sql12_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql13_0;
+COPY s001_sql13_0 FROM '/PATH/DataInput/CSVdata/s001_sql13_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql14_0;
+COPY s001_sql14_0 FROM '/PATH/DataInput/CSVdata/s001_sql14_0.csv'
+DELIMITER ','
+CSV HEADER;
+
+
+DELETE FROM s001_sql1_1;
+COPY s001_sql1_1 FROM '/PATH/DataInput/CSVdata/s001_sql1_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql2_1;
+COPY s001_sql2_1 FROM '/PATH/DataInput/CSVdata/s001_sql2_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql3_1;
+COPY s001_sql3_1 FROM '/PATH/DataInput/CSVdata/s001_sql3_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql4_1;
+COPY s001_sql4_1 FROM '/PATH/DataInput/CSVdata/s001_sql4_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql5_1;
+COPY s001_sql5_1 FROM '/PATH/DataInput/CSVdata/s001_sql5_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql6_1;
+COPY s001_sql6_1 FROM '/PATH/DataInput/CSVdata/s001_sql6_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql7_1;
+COPY s001_sql7_1 FROM '/PATH/DataInput/CSVdata/s001_sql7_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql8_1;
+COPY s001_sql8_1 FROM '/PATH/DataInput/CSVdata/s001_sql8_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql9_1;
+COPY s001_sql9_1 FROM '/PATH/DataInput/CSVdata/s001_sql9_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql10_1;
+COPY s001_sql10_1 FROM '/PATH/DataInput/CSVdata/s001_sql10_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql11_1;
+COPY s001_sql11_1 FROM '/PATH/DataInput/CSVdata/s001_sql11_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql12_1;
+COPY s001_sql12_1 FROM '/PATH/DataInput/CSVdata/s001_sql12_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql13_1;
+COPY s001_sql13_1 FROM '/PATH/DataInput/CSVdata/s001_sql13_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql14_1;
+COPY s001_sql14_1 FROM '/PATH/DataInput/CSVdata/s001_sql14_1.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql1_0_x;
+COPY s001_sql1_0_x FROM '/PATH/DataInput/CSVdata/s001_sql1_0_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql2_0_x;
+COPY s001_sql2_0_x FROM '/PATH/DataInput/CSVdata/s001_sql2_0_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql3_0_x;
+COPY s001_sql3_0_x FROM '/PATH/DataInput/CSVdata/s001_sql3_0_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql1_1_x;
+COPY s001_sql1_1_x FROM '/PATH/DataInput/CSVdata/s001_sql1_1_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql2_1_x;
+COPY s001_sql2_1_x FROM '/PATH/DataInput/CSVdata/s001_sql2_1_x.csv'
+DELIMITER ','
+CSV HEADER;
+
+DELETE FROM s001_sql3_1_x;
+COPY s001_sql3_1_x FROM '/PATH/DataInput/CSVdata/s001_sql3_1_x.csv'
+DELIMITER ','
+CSV HEADER;

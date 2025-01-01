@@ -1,0 +1,17 @@
+c01|c02|c03|c04|c05|c06|c09|c08|c07|c10|c11|c12|c11|
+nat2021_x_1
+nat2022_x_1
+group1
+aggcol
+count
+5
+8
+=====================================
+line 1: focusColNames ;         	//the columns to find explanations
+line 2: table1Name ;				//name of the first table
+line 3: table2Name ;				//name of the second table
+line 4: groupbyColName;			    //name of groupby colum
+line 5: aggColName;				    //name of aggragated column
+line 6: aggFunc;					//aggragate function name: !!count sum!! only now
+line 7: k ;							//the number of explanations you want to get
+line 8: order_int ;					//the max order of the explanation

@@ -1,0 +1,17 @@
+o_orderstatus|sn_regionkey|p_mfgr|o_orderpriority|o_orderdate|l_shipinstruct|l_commitdate|cn_regionkey|l_shipdate|c_mktsegment|l_receiptdate|l_shipmode|p_retailprice|l_linenumber|l_tax
+s001_sql3_0_x
+s001_sql3_1_x
+groupcol
+aggcol
+sum
+5
+8
+=====================================
+line 1: focusColNames ;         	//the columns to find explanations
+line 2: table1Name ;				//name of the first table
+line 3: table2Name ;				//name of the second table
+line 4: groupbyColName;			    //name of groupby colum
+line 5: aggColName;				    //name of aggragated column
+line 6: aggFunc;					//aggragate function name: !!count sum!! only now
+line 7: k ;							//the number of explanations you want to get
+line 8: order_int ;					//the max order of the explanation
