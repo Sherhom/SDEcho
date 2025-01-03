@@ -1,0 +1,6 @@
+hostaddr:localhost
+port:XXXX
+dbname:sdecho
+username:XXXX
+password:XXXX
+======================================
