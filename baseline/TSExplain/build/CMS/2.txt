@@ -1,0 +1,35 @@
+tsv_file: data/cmsdata/cms_x_2.txt
+feature_hier_number: 1
+feature_number: 10
+c01
+c02
+c03
+c04
+c05
+c06
+c15
+c16
+c13
+c14	
+time_col_number: 1
+time
+try_seg_len_ratio: 1
+try_total_len_ratio: 1
+val_col: agg
+supp_ratio: 0
+time_min: 0
+time_max: 11
+post_process: 7
+explain_time_min: 0
+explain_time_max: 11
+metric: MChangeAbs
+topK: 5
+pred_len: -1
+sim: mutual
+seg_number: 20
+min_len: 2
+min_dist: 0
+cascading_opt: 1
+start_number: 0
+table_id: tableID
+order_int: 8
