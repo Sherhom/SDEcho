@@ -8,6 +8,7 @@ We introduced a novel framework for explanation searching, SDEcho, which address
 
 - `SDEcho/` - this section contains all the files necessary to the implementation of SDEcho and will introduce you how to use SDEcho for Sequential Explanation Queries.
 
+- `baseline/` - this section contains all the files necessary to the implementation of baselines ( `BOExplain` `TSExplain` `DIFF` ) and will introduce you how to use them for Sequential Explanation Queries.
 
-
+- We provided 11 queries distributed over 4 datasets to compare the performance of `SDEcho` and baselines( `BOExplain` `TSExplain` `DIFF` )
 
