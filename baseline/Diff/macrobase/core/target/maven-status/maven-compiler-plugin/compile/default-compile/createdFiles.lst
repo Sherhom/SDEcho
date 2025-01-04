@@ -1,0 +1,11 @@
+edu/stanford/futuredata/macrobase/pipeline/Pipeline.class
+edu/stanford/futuredata/macrobase/cli/CliRunner.class
+edu/stanford/futuredata/macrobase/ingest/RESTDataFrameLoader$2.class
+edu/stanford/futuredata/macrobase/pipeline/CubePipeline.class
+edu/stanford/futuredata/macrobase/ingest/RESTDataFrameLoader.class
+edu/stanford/futuredata/macrobase/pipeline/PipelineConfig.class
+edu/stanford/futuredata/macrobase/pipeline/PipelineConfig$1.class
+edu/stanford/futuredata/macrobase/pipeline/BasicBatchPipeline.class
+edu/stanford/futuredata/macrobase/rest/RestServer.class
+edu/stanford/futuredata/macrobase/pipeline/PipelineUtils.class
+edu/stanford/futuredata/macrobase/ingest/RESTDataFrameLoader$1.class

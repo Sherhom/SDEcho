@@ -1,0 +1,4 @@
+edu/stanford/futuredata/macrobase/sql/MacroBaseSQLTest.class
+edu/stanford/futuredata/macrobase/sql/MacroBaseSQLDiffJoinTest.class
+edu/stanford/futuredata/macrobase/sql/MacroBaseSQLJoinTest.class
+edu/stanford/futuredata/macrobase/sql/SQLTestUtils.class

@@ -1,0 +1,8 @@
+/home/zx/workspace/macrobase/core/src/main/java/edu/stanford/futuredata/macrobase/pipeline/PipelineUtils.java
+/home/zx/workspace/macrobase/core/src/main/java/edu/stanford/futuredata/macrobase/pipeline/PipelineConfig.java
+/home/zx/workspace/macrobase/core/src/main/java/edu/stanford/futuredata/macrobase/rest/RestServer.java
+/home/zx/workspace/macrobase/core/src/main/java/edu/stanford/futuredata/macrobase/pipeline/Pipeline.java
+/home/zx/workspace/macrobase/core/src/main/java/edu/stanford/futuredata/macrobase/cli/CliRunner.java
+/home/zx/workspace/macrobase/core/src/main/java/edu/stanford/futuredata/macrobase/ingest/RESTDataFrameLoader.java
+/home/zx/workspace/macrobase/core/src/main/java/edu/stanford/futuredata/macrobase/pipeline/BasicBatchPipeline.java
+/home/zx/workspace/macrobase/core/src/main/java/edu/stanford/futuredata/macrobase/pipeline/CubePipeline.java

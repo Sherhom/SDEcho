@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="macrobase.runtime.command.MacroBasePipelineCommandTest" time="0.054" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/zx/workspace/macrobase/legacy/target/test-classes:/home/zx/workspace/macrobase/legacy/target/classes:/home/zx/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/zx/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/zx/.m2/repository/org/postgresql/postgresql/9.3-1104-jdbc41/postgresql-9.3-1104-jdbc41.jar:/home/zx/.m2/repository/mysql/mysql-connector-java/6.0.2/mysql-connector-java-6.0.2.jar:/home/zx/.m2/repository/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar:/home/zx/.m2/repository/org/apache/commons/commons-csv/1.2/commons-csv-1.2.jar:/home/zx/.m2/repository/com/esotericsoftware/kryo/3.0.3/kryo-3.0.3.jar:/home/zx/.m2/repository/com/esotericsoftware/reflectasm/1.10.1/reflectasm-1.10.1.jar:/home/zx/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/home/zx/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/zx/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/zx/.m2/repository/org/xerial/snappy/snappy-java/1.1.2/snappy-java-1.1.2.jar:/home/zx/.m2/repository/com/google/code/gson/gson/2.5/gson-2.5.jar:/home/zx/.m2/repository/com/mockrunner/mockrunner-jdbc/1.1.1/mockrunner-jdbc-1.1.1.jar:/home/zx/.m2/repository/com/mockrunner/mockrunner-core/1.1.1/mockrunner-core-1.1.1.jar:/home/zx/.m2/repository/jdom/jdom/1.0/jdom-1.0.jar:/home/zx/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/zx/.m2/repository/com/kirkk/jaranalyzer/1.2/jaranalyzer-1.2.jar:/home/zx/.m2/repository/bcel/bcel/5.1/bcel-5.1.jar:/home/zx/.m2/repository/regexp/regexp/1.2/regexp-1.2.jar:/home/zx/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar:/home/zx/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar:/home/zx/.m2/repository/nekohtml/nekohtml/0.9.5/nekohtml-0.9.5.jar:/home/zx/.m2/repository/xerces/xercesImpl/2.4.0/xercesImpl-2.4.0.jar:/home/zx/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-core/1.3.12/dropwizard-core-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-util/1.3.12/dropwizard-util-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/home/zx/.m2/repository/com/google/guava/guava/24.1.1-jre/guava-24.1.1-jre.jar:/home/zx/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/zx/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/zx/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/zx/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/zx/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/zx/.m2/repository/joda-time/joda-time/2.10.1/joda-time-2.10.1.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jackson/1.3.12/dropwizard-jackson-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.9.9/jackson-datatype-guava-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.9.9/jackson-module-afterburner-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.9.9/jackson-datatype-joda-2.9.9.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-validation/1.3.12/dropwizard-validation-1.3.12.jar:/home/zx/.m2/repository/org/hibernate/hibernate-validator/5.4.3.Final/hibernate-validator-5.4.3.Final.jar:/home/zx/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/zx/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/zx/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar:/home/zx/.m2/repository/org/glassfish/javax.el/3.0.0/javax.el-3.0.0.jar:/home/zx/.m2/repository/org/javassist/javassist/3.24.1-GA/javassist-3.24.1-GA.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-configuration/1.3.12/dropwizard-configuration-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.9/jackson-dataformat-yaml-2.9.9.jar:/home/zx/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar:/home/zx/.m2/repository/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar:/home/zx/.m2/repository/org/apache/commons/commons-text/1.2/commons-text-1.2.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-metrics/1.3.12/dropwizard-metrics-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jersey/1.3.12/dropwizard-jersey-1.3.12.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-server/2.25.1/jersey-server-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-common/2.25.1/jersey-common-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.25.1/jersey-guava-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-client/2.25.1/jersey-client-2.25.1.jar:/home/zx/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.25.1/jersey-media-jaxb-2.25.1.jar:/home/zx/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-api/2.5.0-b32/hk2-api-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-utils/2.5.0-b32/hk2-utils-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.5.0-b32/aopalliance-repackaged-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/external/javax.inject/2.5.0-b32/javax.inject-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-locator/2.5.0-b32/hk2-locator-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/jersey/ext/jersey-metainf-services/2.25.1/jersey-metainf-services-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/ext/jersey-bean-validation/2.25.1/jersey-bean-validation-2.25.1.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jersey2/4.0.5/metrics-jersey2-4.0.5.jar:/home/zx/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.9/jackson-jaxrs-json-provider-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.9/jackson-jaxrs-base-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar:/home/zx/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.25.1/jersey-container-servlet-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.25.1/jersey-container-servlet-core-2.25.1.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-server/9.4.18.v20190429/jetty-server-9.4.18.v20190429.jar:/home/zx/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-io/9.4.18.v20190429/jetty-io-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-webapp/9.4.18.v20190429/jetty-webapp-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-xml/9.4.18.v20190429/jetty-xml-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-continuation/9.4.18.v20190429/jetty-continuation-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-servlets/1.3.12/dropwizard-servlets-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-annotation/4.0.5/metrics-annotation-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jetty/1.3.12/dropwizard-jetty-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jetty9/4.0.5/metrics-jetty9-4.0.5.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.18.v20190429/jetty-servlet-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-security/9.4.18.v20190429/jetty-security-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-servlets/9.4.18.v20190429/jetty-servlets-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-http/9.4.18.v20190429/jetty-http-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-lifecycle/1.3.12/dropwizard-lifecycle-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-core/4.0.5/metrics-core-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jvm/4.0.5/metrics-jvm-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jmx/4.0.5/metrics-jmx-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-servlets/4.0.5/metrics-servlets-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-json/4.0.5/metrics-json-4.0.5.jar:/home/zx/.m2/repository/com/papertrail/profiler/1.0.2/profiler-1.0.2.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-healthchecks/4.0.5/metrics-healthchecks-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-request-logging/1.3.12/dropwizard-request-logging-1.3.12.jar:/home/zx/.m2/repository/ch/qos/logback/logback-access/1.2.3/logback-access-1.2.3.jar:/home/zx/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.8.1/argparse4j-0.8.1.jar:/home/zx/.m2/repository/org/eclipse/jetty/toolchain/setuid/jetty-setuid-java/1.0.3/jetty-setuid-java-1.0.3.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-assets/1.3.12/dropwizard-assets-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-logging/1.3.12/dropwizard-logging-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-logback/4.0.5/metrics-logback-4.0.5.jar:/home/zx/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/home/zx/.m2/repository/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar:/home/zx/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/zx/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/zx/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.26/log4j-over-slf4j-1.7.26.jar:/home/zx/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.26/jcl-over-slf4j-1.7.26.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-util/9.4.18.v20190429/jetty-util-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-db/1.3.12/dropwizard-db-1.3.12.jar:/home/zx/.m2/repository/org/apache/tomcat/tomcat-jdbc/9.0.16/tomcat-jdbc-9.0.16.jar:/home/zx/.m2/repository/org/apache/tomcat/tomcat-juli/9.0.16/tomcat-juli-9.0.16.jar:"/>
+    <property name="java.vm.vendor" value="Red Hat, Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.redhat.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/home/zx/workspace/macrobase/legacy/target/surefire/surefirebooter-20230618171739623_3.jar /home/zx/workspace/macrobase/legacy/target/surefire 2023-06-18T17-17-38_044-jvmRun1 surefire-20230618171739623_1tmp surefire_0-20230618171739623_2tmp"/>
+    <property name="surefire.test.class.path" value="/home/zx/workspace/macrobase/legacy/target/test-classes:/home/zx/workspace/macrobase/legacy/target/classes:/home/zx/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/zx/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/zx/.m2/repository/org/postgresql/postgresql/9.3-1104-jdbc41/postgresql-9.3-1104-jdbc41.jar:/home/zx/.m2/repository/mysql/mysql-connector-java/6.0.2/mysql-connector-java-6.0.2.jar:/home/zx/.m2/repository/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar:/home/zx/.m2/repository/org/apache/commons/commons-csv/1.2/commons-csv-1.2.jar:/home/zx/.m2/repository/com/esotericsoftware/kryo/3.0.3/kryo-3.0.3.jar:/home/zx/.m2/repository/com/esotericsoftware/reflectasm/1.10.1/reflectasm-1.10.1.jar:/home/zx/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/home/zx/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/zx/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/zx/.m2/repository/org/xerial/snappy/snappy-java/1.1.2/snappy-java-1.1.2.jar:/home/zx/.m2/repository/com/google/code/gson/gson/2.5/gson-2.5.jar:/home/zx/.m2/repository/com/mockrunner/mockrunner-jdbc/1.1.1/mockrunner-jdbc-1.1.1.jar:/home/zx/.m2/repository/com/mockrunner/mockrunner-core/1.1.1/mockrunner-core-1.1.1.jar:/home/zx/.m2/repository/jdom/jdom/1.0/jdom-1.0.jar:/home/zx/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/zx/.m2/repository/com/kirkk/jaranalyzer/1.2/jaranalyzer-1.2.jar:/home/zx/.m2/repository/bcel/bcel/5.1/bcel-5.1.jar:/home/zx/.m2/repository/regexp/regexp/1.2/regexp-1.2.jar:/home/zx/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar:/home/zx/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar:/home/zx/.m2/repository/nekohtml/nekohtml/0.9.5/nekohtml-0.9.5.jar:/home/zx/.m2/repository/xerces/xercesImpl/2.4.0/xercesImpl-2.4.0.jar:/home/zx/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-core/1.3.12/dropwizard-core-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-util/1.3.12/dropwizard-util-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/home/zx/.m2/repository/com/google/guava/guava/24.1.1-jre/guava-24.1.1-jre.jar:/home/zx/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/zx/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/zx/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/zx/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/zx/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/zx/.m2/repository/joda-time/joda-time/2.10.1/joda-time-2.10.1.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jackson/1.3.12/dropwizard-jackson-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.9.9/jackson-datatype-guava-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.9.9/jackson-module-afterburner-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.9.9/jackson-datatype-joda-2.9.9.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-validation/1.3.12/dropwizard-validation-1.3.12.jar:/home/zx/.m2/repository/org/hibernate/hibernate-validator/5.4.3.Final/hibernate-validator-5.4.3.Final.jar:/home/zx/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/zx/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/zx/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar:/home/zx/.m2/repository/org/glassfish/javax.el/3.0.0/javax.el-3.0.0.jar:/home/zx/.m2/repository/org/javassist/javassist/3.24.1-GA/javassist-3.24.1-GA.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-configuration/1.3.12/dropwizard-configuration-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.9/jackson-dataformat-yaml-2.9.9.jar:/home/zx/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar:/home/zx/.m2/repository/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar:/home/zx/.m2/repository/org/apache/commons/commons-text/1.2/commons-text-1.2.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-metrics/1.3.12/dropwizard-metrics-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jersey/1.3.12/dropwizard-jersey-1.3.12.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-server/2.25.1/jersey-server-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-common/2.25.1/jersey-common-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.25.1/jersey-guava-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-client/2.25.1/jersey-client-2.25.1.jar:/home/zx/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.25.1/jersey-media-jaxb-2.25.1.jar:/home/zx/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-api/2.5.0-b32/hk2-api-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-utils/2.5.0-b32/hk2-utils-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.5.0-b32/aopalliance-repackaged-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/external/javax.inject/2.5.0-b32/javax.inject-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-locator/2.5.0-b32/hk2-locator-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/jersey/ext/jersey-metainf-services/2.25.1/jersey-metainf-services-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/ext/jersey-bean-validation/2.25.1/jersey-bean-validation-2.25.1.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jersey2/4.0.5/metrics-jersey2-4.0.5.jar:/home/zx/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.9/jackson-jaxrs-json-provider-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.9/jackson-jaxrs-base-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar:/home/zx/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.25.1/jersey-container-servlet-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.25.1/jersey-container-servlet-core-2.25.1.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-server/9.4.18.v20190429/jetty-server-9.4.18.v20190429.jar:/home/zx/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-io/9.4.18.v20190429/jetty-io-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-webapp/9.4.18.v20190429/jetty-webapp-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-xml/9.4.18.v20190429/jetty-xml-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-continuation/9.4.18.v20190429/jetty-continuation-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-servlets/1.3.12/dropwizard-servlets-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-annotation/4.0.5/metrics-annotation-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jetty/1.3.12/dropwizard-jetty-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jetty9/4.0.5/metrics-jetty9-4.0.5.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.18.v20190429/jetty-servlet-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-security/9.4.18.v20190429/jetty-security-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-servlets/9.4.18.v20190429/jetty-servlets-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-http/9.4.18.v20190429/jetty-http-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-lifecycle/1.3.12/dropwizard-lifecycle-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-core/4.0.5/metrics-core-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jvm/4.0.5/metrics-jvm-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jmx/4.0.5/metrics-jmx-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-servlets/4.0.5/metrics-servlets-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-json/4.0.5/metrics-json-4.0.5.jar:/home/zx/.m2/repository/com/papertrail/profiler/1.0.2/profiler-1.0.2.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-healthchecks/4.0.5/metrics-healthchecks-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-request-logging/1.3.12/dropwizard-request-logging-1.3.12.jar:/home/zx/.m2/repository/ch/qos/logback/logback-access/1.2.3/logback-access-1.2.3.jar:/home/zx/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.8.1/argparse4j-0.8.1.jar:/home/zx/.m2/repository/org/eclipse/jetty/toolchain/setuid/jetty-setuid-java/1.0.3/jetty-setuid-java-1.0.3.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-assets/1.3.12/dropwizard-assets-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-logging/1.3.12/dropwizard-logging-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-logback/4.0.5/metrics-logback-4.0.5.jar:/home/zx/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/home/zx/.m2/repository/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar:/home/zx/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/zx/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/zx/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.26/log4j-over-slf4j-1.7.26.jar:/home/zx/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.26/jcl-over-slf4j-1.7.26.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-util/9.4.18.v20190429/jetty-util-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-db/1.3.12/dropwizard-db-1.3.12.jar:/home/zx/.m2/repository/org/apache/tomcat/tomcat-jdbc/9.0.16/tomcat-jdbc-9.0.16.jar:/home/zx/.m2/repository/org/apache/tomcat/tomcat-juli/9.0.16/tomcat-juli-9.0.16.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/zx"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre"/>
+    <property name="basedir" value="/home/zx/workspace/macrobase/legacy"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/zx/workspace/macrobase/legacy/target/surefire/surefirebooter-20230618171739623_3.jar"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_345-b01"/>
+    <property name="user.name" value="zx"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="3.10.0-957.el7.x86_64"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/zx/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%207&amp;component=java-1.8.0-openjdk"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_345"/>
+    <property name="user.dir" value="/home/zx/workspace/macrobase/legacy"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/home/zx/pgserver/lib:/usr/local/lib:/home/zx/pgserver/lib:/usr/local/lib:/home/spadcn/hc/unvdb-22.4.15-linux-x86_64/lib:/usr/local/mpc/lib:/usr/local/gmp/lib:/usr/local/mpfr/lib:/usr/local/gcc-11/lib64:/usr/local/lib64::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Red Hat, Inc."/>
+    <property name="java.vm.version" value="25.345-b01"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testPipelineRuns" classname="macrobase.runtime.command.MacroBasePipelineCommandTest" time="0.054">
+    <system-out><![CDATA[17:17:44.693 [main] ERROR macrobase.runtime.command.MacroBasePipelineCommand - {} is not an instance of Pipeline! Exiting...
+6/18/23 5:17:44 PM =============================================================
+
+-- Counters --------------------------------------------------------------------
+macrobase.analysis.stats.MAD.zeroMADs
+             count = 1
+macrobase.analysis.stats.MinCovDet.singularCovariances
+             count = 4
+
+-- Timers ----------------------------------------------------------------------
+macrobase.analysis.stats.MAD.medianComputation
+             count = 30
+         mean rate = 7.84 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 7.04 milliseconds
+              mean = 0.54 milliseconds
+            stddev = 1.36 milliseconds
+            median = 0.22 milliseconds
+              75% <= 0.31 milliseconds
+              95% <= 3.55 milliseconds
+              98% <= 7.04 milliseconds
+              99% <= 7.04 milliseconds
+            99.9% <= 7.04 milliseconds
+macrobase.analysis.stats.MAD.residualComputation
+             count = 30
+         mean rate = 7.84 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 0.51 milliseconds
+              mean = 0.05 milliseconds
+            stddev = 0.11 milliseconds
+            median = 0.01 milliseconds
+              75% <= 0.04 milliseconds
+              95% <= 0.41 milliseconds
+              98% <= 0.51 milliseconds
+              99% <= 0.51 milliseconds
+            99.9% <= 0.51 milliseconds
+macrobase.analysis.stats.MAD.residualMedianComputation
+             count = 30
+         mean rate = 7.84 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 1.58 milliseconds
+              mean = 0.17 milliseconds
+            stddev = 0.37 milliseconds
+            median = 0.06 milliseconds
+              75% <= 0.15 milliseconds
+              95% <= 1.48 milliseconds
+              98% <= 1.58 milliseconds
+              99% <= 1.58 milliseconds
+            99.9% <= 1.58 milliseconds
+macrobase.analysis.stats.MinCovDet.chooseKRandom
+             count = 5
+         mean rate = 1.33 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.01 milliseconds
+               max = 13.82 milliseconds
+              mean = 2.71 milliseconds
+            stddev = 5.40 milliseconds
+            median = 0.01 milliseconds
+              75% <= 0.30 milliseconds
+              95% <= 13.82 milliseconds
+              98% <= 13.82 milliseconds
+              99% <= 13.82 milliseconds
+            99.9% <= 13.82 milliseconds
+macrobase.analysis.stats.MinCovDet.covarianceComputation
+             count = 26
+         mean rate = 6.92 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.05 milliseconds
+               max = 168.65 milliseconds
+              mean = 28.48 milliseconds
+            stddev = 35.78 milliseconds
+            median = 21.21 milliseconds
+              75% <= 25.77 milliseconds
+              95% <= 116.13 milliseconds
+              98% <= 168.65 milliseconds
+              99% <= 168.65 milliseconds
+            99.9% <= 168.65 milliseconds
+macrobase.analysis.stats.MinCovDet.determinantComputation
+             count = 26
+         mean rate = 6.91 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 2.29 milliseconds
+              mean = 0.14 milliseconds
+            stddev = 0.47 milliseconds
+            median = 0.01 milliseconds
+              75% <= 0.02 milliseconds
+              95% <= 0.90 milliseconds
+              98% <= 2.29 milliseconds
+              99% <= 2.29 milliseconds
+            99.9% <= 2.29 milliseconds
+macrobase.analysis.stats.MinCovDet.findKClosest
+             count = 21
+         mean rate = 5.58 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.01 milliseconds
+               max = 118.58 milliseconds
+              mean = 50.47 milliseconds
+            stddev = 31.06 milliseconds
+            median = 44.74 milliseconds
+              75% <= 68.97 milliseconds
+              95% <= 98.63 milliseconds
+              98% <= 118.58 milliseconds
+              99% <= 118.58 milliseconds
+            99.9% <= 118.58 milliseconds
+macrobase.analysis.stats.MinCovDet.meanComputation
+             count = 26
+         mean rate = 6.91 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.01 milliseconds
+               max = 11.78 milliseconds
+              mean = 5.82 milliseconds
+            stddev = 4.07 milliseconds
+            median = 6.72 milliseconds
+              75% <= 9.28 milliseconds
+              95% <= 11.19 milliseconds
+              98% <= 11.78 milliseconds
+              99% <= 11.78 milliseconds
+            99.9% <= 11.78 milliseconds
+macrobase.analysis.stats.ZScore.meanComputation
+             count = 1
+         mean rate = 0.82 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.05 milliseconds
+               max = 0.05 milliseconds
+              mean = 0.05 milliseconds
+            stddev = 0.00 milliseconds
+            median = 0.05 milliseconds
+              75% <= 0.05 milliseconds
+              95% <= 0.05 milliseconds
+              98% <= 0.05 milliseconds
+              99% <= 0.05 milliseconds
+            99.9% <= 0.05 milliseconds
+macrobase.analysis.stats.ZScore.stddevComputation
+             count = 1
+         mean rate = 0.82 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.02 milliseconds
+               max = 0.02 milliseconds
+              mean = 0.02 milliseconds
+            stddev = 0.00 milliseconds
+            median = 0.02 milliseconds
+              75% <= 0.02 milliseconds
+              95% <= 0.02 milliseconds
+              98% <= 0.02 milliseconds
+              99% <= 0.02 milliseconds
+            99.9% <= 0.02 milliseconds
+macrobase.analysis.summary.itemset.ExponentiallyDecayingEmergingItemsets.inlierDecayTime
+             count = 12
+         mean rate = 53.61 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.02 milliseconds
+               max = 0.05 milliseconds
+              mean = 0.03 milliseconds
+            stddev = 0.01 milliseconds
+            median = 0.02 milliseconds
+              75% <= 0.03 milliseconds
+              95% <= 0.05 milliseconds
+              98% <= 0.05 milliseconds
+              99% <= 0.05 milliseconds
+            99.9% <= 0.05 milliseconds
+macrobase.analysis.summary.itemset.ExponentiallyDecayingEmergingItemsets.outlierDecayTime
+             count = 12
+         mean rate = 53.46 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.03 milliseconds
+               max = 0.17 milliseconds
+              mean = 0.07 milliseconds
+            stddev = 0.03 milliseconds
+            median = 0.06 milliseconds
+              75% <= 0.08 milliseconds
+              95% <= 0.17 milliseconds
+              98% <= 0.17 milliseconds
+              99% <= 0.17 milliseconds
+            99.9% <= 0.17 milliseconds
+macrobase.analysis.summary.itemset.FPGrowth.fpMine
+             count = 8
+         mean rate = 1.94 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.04 milliseconds
+               max = 7.22 milliseconds
+              mean = 1.14 milliseconds
+            stddev = 2.29 milliseconds
+            median = 0.13 milliseconds
+              75% <= 0.61 milliseconds
+              95% <= 7.22 milliseconds
+              98% <= 7.22 milliseconds
+              99% <= 7.22 milliseconds
+            99.9% <= 7.22 milliseconds
+macrobase.analysis.summary.itemset.FPGrowth.insertTransactions
+             count = 8
+         mean rate = 1.94 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.03 milliseconds
+               max = 1.19 milliseconds
+              mean = 0.24 milliseconds
+            stddev = 0.37 milliseconds
+            median = 0.06 milliseconds
+              75% <= 0.41 milliseconds
+              95% <= 1.19 milliseconds
+              98% <= 1.19 milliseconds
+              99% <= 1.19 milliseconds
+            99.9% <= 1.19 milliseconds
+macrobase.analysis.summary.itemset.FPGrowth.itemCounts
+             count = 8
+         mean rate = 1.94 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.04 milliseconds
+               max = 1.22 milliseconds
+              mean = 0.21 milliseconds
+            stddev = 0.38 milliseconds
+            median = 0.08 milliseconds
+              75% <= 0.09 milliseconds
+              95% <= 1.22 milliseconds
+              98% <= 1.22 milliseconds
+              99% <= 1.22 milliseconds
+            99.9% <= 1.22 milliseconds
+macrobase.analysis.summary.itemset.FPGrowthEmerging.inlierRatio
+             count = 3
+         mean rate = 5.29 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.28 milliseconds
+               max = 7.67 milliseconds
+              mean = 3.23 milliseconds
+            stddev = 3.19 milliseconds
+            median = 1.75 milliseconds
+              75% <= 7.67 milliseconds
+              95% <= 7.67 milliseconds
+              98% <= 7.67 milliseconds
+              99% <= 7.67 milliseconds
+            99.9% <= 7.67 milliseconds
+macrobase.analysis.summary.itemset.FPGrowthEmerging.outlierFPGrowth
+             count = 3
+         mean rate = 5.28 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.37 milliseconds
+               max = 0.92 milliseconds
+              mean = 0.59 milliseconds
+            stddev = 0.24 milliseconds
+            median = 0.47 milliseconds
+              75% <= 0.92 milliseconds
+              95% <= 0.92 milliseconds
+              98% <= 0.92 milliseconds
+              99% <= 0.92 milliseconds
+            99.9% <= 0.92 milliseconds
+macrobase.analysis.summary.itemset.FPGrowthEmerging.singleItemCounts
+             count = 3
+         mean rate = 5.28 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.17 milliseconds
+               max = 9.79 milliseconds
+              mean = 3.38 milliseconds
+            stddev = 4.53 milliseconds
+            median = 0.18 milliseconds
+              75% <= 9.79 milliseconds
+              95% <= 9.79 milliseconds
+              98% <= 9.79 milliseconds
+              99% <= 9.79 milliseconds
+            99.9% <= 9.79 milliseconds
+macrobase.analysis.summary.itemset.StreamingFPGrowth.fpMine
+             count = 5
+         mean rate = 1.15 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.04 milliseconds
+               max = 27.04 milliseconds
+              mean = 7.23 milliseconds
+            stddev = 10.45 milliseconds
+            median = 0.08 milliseconds
+              75% <= 10.29 milliseconds
+              95% <= 27.04 milliseconds
+              98% <= 27.04 milliseconds
+              99% <= 27.04 milliseconds
+            99.9% <= 27.04 milliseconds
+macrobase.analysis.summary.itemset.StreamingFPGrowth.insertFrequentItems
+             count = 2
+         mean rate = 0.46 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.16 milliseconds
+               max = 7.72 milliseconds
+              mean = 3.94 milliseconds
+            stddev = 3.78 milliseconds
+            median = 7.72 milliseconds
+              75% <= 7.72 milliseconds
+              95% <= 7.72 milliseconds
+              98% <= 7.72 milliseconds
+              99% <= 7.72 milliseconds
+            99.9% <= 7.72 milliseconds
+macrobase.analysis.summary.itemset.StreamingFPGrowth.restructureTree
+             count = 83
+         mean rate = 19.06 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.01 milliseconds
+               max = 7.20 milliseconds
+              mean = 0.81 milliseconds
+            stddev = 1.09 milliseconds
+            median = 0.60 milliseconds
+              75% <= 1.03 milliseconds
+              95% <= 2.89 milliseconds
+              98% <= 4.00 milliseconds
+              99% <= 7.20 milliseconds
+            99.9% <= 7.20 milliseconds
+macrobase.analysis.summary.itemset.StreamingFPGrowth.updateFrequentItemOrder
+             count = 235
+         mean rate = 53.95 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 0.61 milliseconds
+              mean = 0.04 milliseconds
+            stddev = 0.07 milliseconds
+            median = 0.01 milliseconds
+              75% <= 0.05 milliseconds
+              95% <= 0.13 milliseconds
+              98% <= 0.17 milliseconds
+              99% <= 0.44 milliseconds
+            99.9% <= 0.61 milliseconds
+
+
+17:17:44.723 [main] INFO macrobase.runtime.command.MacroBasePipelineCommand - Result: []
+6/18/23 5:17:44 PM =============================================================
+
+-- Counters --------------------------------------------------------------------
+macrobase.analysis.stats.MAD.zeroMADs
+             count = 1
+macrobase.analysis.stats.MinCovDet.singularCovariances
+             count = 4
+
+-- Timers ----------------------------------------------------------------------
+macrobase.analysis.stats.MAD.medianComputation
+             count = 30
+         mean rate = 7.80 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 7.04 milliseconds
+              mean = 0.54 milliseconds
+            stddev = 1.36 milliseconds
+            median = 0.22 milliseconds
+              75% <= 0.31 milliseconds
+              95% <= 3.55 milliseconds
+              98% <= 7.04 milliseconds
+              99% <= 7.04 milliseconds
+            99.9% <= 7.04 milliseconds
+macrobase.analysis.stats.MAD.residualComputation
+             count = 30
+         mean rate = 7.80 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 0.51 milliseconds
+              mean = 0.05 milliseconds
+            stddev = 0.11 milliseconds
+            median = 0.01 milliseconds
+              75% <= 0.04 milliseconds
+              95% <= 0.41 milliseconds
+              98% <= 0.51 milliseconds
+              99% <= 0.51 milliseconds
+            99.9% <= 0.51 milliseconds
+macrobase.analysis.stats.MAD.residualMedianComputation
+             count = 30
+         mean rate = 7.80 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 1.58 milliseconds
+              mean = 0.17 milliseconds
+            stddev = 0.37 milliseconds
+            median = 0.06 milliseconds
+              75% <= 0.15 milliseconds
+              95% <= 1.48 milliseconds
+              98% <= 1.58 milliseconds
+              99% <= 1.58 milliseconds
+            99.9% <= 1.58 milliseconds
+macrobase.analysis.stats.MinCovDet.chooseKRandom
+             count = 5
+         mean rate = 1.32 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.01 milliseconds
+               max = 13.82 milliseconds
+              mean = 2.71 milliseconds
+            stddev = 5.40 milliseconds
+            median = 0.01 milliseconds
+              75% <= 0.30 milliseconds
+              95% <= 13.82 milliseconds
+              98% <= 13.82 milliseconds
+              99% <= 13.82 milliseconds
+            99.9% <= 13.82 milliseconds
+macrobase.analysis.stats.MinCovDet.covarianceComputation
+             count = 26
+         mean rate = 6.88 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.05 milliseconds
+               max = 168.65 milliseconds
+              mean = 28.48 milliseconds
+            stddev = 35.78 milliseconds
+            median = 21.21 milliseconds
+              75% <= 25.77 milliseconds
+              95% <= 116.13 milliseconds
+              98% <= 168.65 milliseconds
+              99% <= 168.65 milliseconds
+            99.9% <= 168.65 milliseconds
+macrobase.analysis.stats.MinCovDet.determinantComputation
+             count = 26
+         mean rate = 6.88 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 2.29 milliseconds
+              mean = 0.14 milliseconds
+            stddev = 0.47 milliseconds
+            median = 0.01 milliseconds
+              75% <= 0.02 milliseconds
+              95% <= 0.90 milliseconds
+              98% <= 2.29 milliseconds
+              99% <= 2.29 milliseconds
+            99.9% <= 2.29 milliseconds
+macrobase.analysis.stats.MinCovDet.findKClosest
+             count = 21
+         mean rate = 5.56 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.01 milliseconds
+               max = 118.58 milliseconds
+              mean = 50.47 milliseconds
+            stddev = 31.06 milliseconds
+            median = 44.74 milliseconds
+              75% <= 68.97 milliseconds
+              95% <= 98.63 milliseconds
+              98% <= 118.58 milliseconds
+              99% <= 118.58 milliseconds
+            99.9% <= 118.58 milliseconds
+macrobase.analysis.stats.MinCovDet.meanComputation
+             count = 26
+         mean rate = 6.88 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.01 milliseconds
+               max = 11.78 milliseconds
+              mean = 5.82 milliseconds
+            stddev = 4.07 milliseconds
+            median = 6.72 milliseconds
+              75% <= 9.28 milliseconds
+              95% <= 11.19 milliseconds
+              98% <= 11.78 milliseconds
+              99% <= 11.78 milliseconds
+            99.9% <= 11.78 milliseconds
+macrobase.analysis.stats.ZScore.meanComputation
+             count = 1
+         mean rate = 0.81 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.05 milliseconds
+               max = 0.05 milliseconds
+              mean = 0.05 milliseconds
+            stddev = 0.00 milliseconds
+            median = 0.05 milliseconds
+              75% <= 0.05 milliseconds
+              95% <= 0.05 milliseconds
+              98% <= 0.05 milliseconds
+              99% <= 0.05 milliseconds
+            99.9% <= 0.05 milliseconds
+macrobase.analysis.stats.ZScore.stddevComputation
+             count = 1
+         mean rate = 0.81 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.02 milliseconds
+               max = 0.02 milliseconds
+              mean = 0.02 milliseconds
+            stddev = 0.00 milliseconds
+            median = 0.02 milliseconds
+              75% <= 0.02 milliseconds
+              95% <= 0.02 milliseconds
+              98% <= 0.02 milliseconds
+              99% <= 0.02 milliseconds
+            99.9% <= 0.02 milliseconds
+macrobase.analysis.summary.itemset.ExponentiallyDecayingEmergingItemsets.inlierDecayTime
+             count = 12
+         mean rate = 50.57 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.02 milliseconds
+               max = 0.05 milliseconds
+              mean = 0.03 milliseconds
+            stddev = 0.01 milliseconds
+            median = 0.02 milliseconds
+              75% <= 0.03 milliseconds
+              95% <= 0.05 milliseconds
+              98% <= 0.05 milliseconds
+              99% <= 0.05 milliseconds
+            99.9% <= 0.05 milliseconds
+macrobase.analysis.summary.itemset.ExponentiallyDecayingEmergingItemsets.outlierDecayTime
+             count = 12
+         mean rate = 50.47 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.03 milliseconds
+               max = 0.17 milliseconds
+              mean = 0.07 milliseconds
+            stddev = 0.03 milliseconds
+            median = 0.06 milliseconds
+              75% <= 0.08 milliseconds
+              95% <= 0.17 milliseconds
+              98% <= 0.17 milliseconds
+              99% <= 0.17 milliseconds
+            99.9% <= 0.17 milliseconds
+macrobase.analysis.summary.itemset.FPGrowth.fpMine
+             count = 8
+         mean rate = 1.94 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.04 milliseconds
+               max = 7.22 milliseconds
+              mean = 1.14 milliseconds
+            stddev = 2.29 milliseconds
+            median = 0.13 milliseconds
+              75% <= 0.61 milliseconds
+              95% <= 7.22 milliseconds
+              98% <= 7.22 milliseconds
+              99% <= 7.22 milliseconds
+            99.9% <= 7.22 milliseconds
+macrobase.analysis.summary.itemset.FPGrowth.insertTransactions
+             count = 8
+         mean rate = 1.94 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.03 milliseconds
+               max = 1.19 milliseconds
+              mean = 0.24 milliseconds
+            stddev = 0.37 milliseconds
+            median = 0.06 milliseconds
+              75% <= 0.41 milliseconds
+              95% <= 1.19 milliseconds
+              98% <= 1.19 milliseconds
+              99% <= 1.19 milliseconds
+            99.9% <= 1.19 milliseconds
+macrobase.analysis.summary.itemset.FPGrowth.itemCounts
+             count = 8
+         mean rate = 1.94 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.04 milliseconds
+               max = 1.22 milliseconds
+              mean = 0.21 milliseconds
+            stddev = 0.38 milliseconds
+            median = 0.08 milliseconds
+              75% <= 0.09 milliseconds
+              95% <= 1.22 milliseconds
+              98% <= 1.22 milliseconds
+              99% <= 1.22 milliseconds
+            99.9% <= 1.22 milliseconds
+macrobase.analysis.summary.itemset.FPGrowthEmerging.inlierRatio
+             count = 3
+         mean rate = 5.18 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.28 milliseconds
+               max = 7.67 milliseconds
+              mean = 3.23 milliseconds
+            stddev = 3.19 milliseconds
+            median = 1.75 milliseconds
+              75% <= 7.67 milliseconds
+              95% <= 7.67 milliseconds
+              98% <= 7.67 milliseconds
+              99% <= 7.67 milliseconds
+            99.9% <= 7.67 milliseconds
+macrobase.analysis.summary.itemset.FPGrowthEmerging.outlierFPGrowth
+             count = 3
+         mean rate = 5.18 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.37 milliseconds
+               max = 0.92 milliseconds
+              mean = 0.59 milliseconds
+            stddev = 0.24 milliseconds
+            median = 0.47 milliseconds
+              75% <= 0.92 milliseconds
+              95% <= 0.92 milliseconds
+              98% <= 0.92 milliseconds
+              99% <= 0.92 milliseconds
+            99.9% <= 0.92 milliseconds
+macrobase.analysis.summary.itemset.FPGrowthEmerging.singleItemCounts
+             count = 3
+         mean rate = 5.18 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.17 milliseconds
+               max = 9.79 milliseconds
+              mean = 3.38 milliseconds
+            stddev = 4.53 milliseconds
+            median = 0.18 milliseconds
+              75% <= 9.79 milliseconds
+              95% <= 9.79 milliseconds
+              98% <= 9.79 milliseconds
+              99% <= 9.79 milliseconds
+            99.9% <= 9.79 milliseconds
+macrobase.analysis.summary.itemset.StreamingFPGrowth.fpMine
+             count = 5
+         mean rate = 1.15 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.04 milliseconds
+               max = 27.04 milliseconds
+              mean = 7.23 milliseconds
+            stddev = 10.45 milliseconds
+            median = 0.08 milliseconds
+              75% <= 10.29 milliseconds
+              95% <= 27.04 milliseconds
+              98% <= 27.04 milliseconds
+              99% <= 27.04 milliseconds
+            99.9% <= 27.04 milliseconds
+macrobase.analysis.summary.itemset.StreamingFPGrowth.insertFrequentItems
+             count = 2
+         mean rate = 0.46 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.16 milliseconds
+               max = 7.72 milliseconds
+              mean = 3.94 milliseconds
+            stddev = 3.78 milliseconds
+            median = 7.72 milliseconds
+              75% <= 7.72 milliseconds
+              95% <= 7.72 milliseconds
+              98% <= 7.72 milliseconds
+              99% <= 7.72 milliseconds
+            99.9% <= 7.72 milliseconds
+macrobase.analysis.summary.itemset.StreamingFPGrowth.restructureTree
+             count = 83
+         mean rate = 19.01 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.01 milliseconds
+               max = 7.20 milliseconds
+              mean = 0.81 milliseconds
+            stddev = 1.09 milliseconds
+            median = 0.60 milliseconds
+              75% <= 1.03 milliseconds
+              95% <= 2.89 milliseconds
+              98% <= 4.00 milliseconds
+              99% <= 7.20 milliseconds
+            99.9% <= 7.20 milliseconds
+macrobase.analysis.summary.itemset.StreamingFPGrowth.updateFrequentItemOrder
+             count = 235
+         mean rate = 53.81 calls/second
+     1-minute rate = 0.00 calls/second
+     5-minute rate = 0.00 calls/second
+    15-minute rate = 0.00 calls/second
+               min = 0.00 milliseconds
+               max = 0.61 milliseconds
+              mean = 0.04 milliseconds
+            stddev = 0.07 milliseconds
+            median = 0.01 milliseconds
+              75% <= 0.05 milliseconds
+              95% <= 0.13 milliseconds
+              98% <= 0.17 milliseconds
+              99% <= 0.44 milliseconds
+            99.9% <= 0.61 milliseconds
+
+
+17:17:44.734 [main] INFO macrobase.runtime.command.MacroBasePipelineCommand - Result: []
+]]></system-out>
+  </testcase>
+</testsuite>

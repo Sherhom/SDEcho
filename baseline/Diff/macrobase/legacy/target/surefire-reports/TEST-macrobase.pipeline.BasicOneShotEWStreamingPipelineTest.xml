@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="macrobase.pipeline.BasicOneShotEWStreamingPipelineTest" time="0.278" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/zx/workspace/macrobase/legacy/target/test-classes:/home/zx/workspace/macrobase/legacy/target/classes:/home/zx/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/zx/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/zx/.m2/repository/org/postgresql/postgresql/9.3-1104-jdbc41/postgresql-9.3-1104-jdbc41.jar:/home/zx/.m2/repository/mysql/mysql-connector-java/6.0.2/mysql-connector-java-6.0.2.jar:/home/zx/.m2/repository/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar:/home/zx/.m2/repository/org/apache/commons/commons-csv/1.2/commons-csv-1.2.jar:/home/zx/.m2/repository/com/esotericsoftware/kryo/3.0.3/kryo-3.0.3.jar:/home/zx/.m2/repository/com/esotericsoftware/reflectasm/1.10.1/reflectasm-1.10.1.jar:/home/zx/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/home/zx/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/zx/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/zx/.m2/repository/org/xerial/snappy/snappy-java/1.1.2/snappy-java-1.1.2.jar:/home/zx/.m2/repository/com/google/code/gson/gson/2.5/gson-2.5.jar:/home/zx/.m2/repository/com/mockrunner/mockrunner-jdbc/1.1.1/mockrunner-jdbc-1.1.1.jar:/home/zx/.m2/repository/com/mockrunner/mockrunner-core/1.1.1/mockrunner-core-1.1.1.jar:/home/zx/.m2/repository/jdom/jdom/1.0/jdom-1.0.jar:/home/zx/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/zx/.m2/repository/com/kirkk/jaranalyzer/1.2/jaranalyzer-1.2.jar:/home/zx/.m2/repository/bcel/bcel/5.1/bcel-5.1.jar:/home/zx/.m2/repository/regexp/regexp/1.2/regexp-1.2.jar:/home/zx/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar:/home/zx/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar:/home/zx/.m2/repository/nekohtml/nekohtml/0.9.5/nekohtml-0.9.5.jar:/home/zx/.m2/repository/xerces/xercesImpl/2.4.0/xercesImpl-2.4.0.jar:/home/zx/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-core/1.3.12/dropwizard-core-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-util/1.3.12/dropwizard-util-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/home/zx/.m2/repository/com/google/guava/guava/24.1.1-jre/guava-24.1.1-jre.jar:/home/zx/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/zx/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/zx/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/zx/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/zx/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/zx/.m2/repository/joda-time/joda-time/2.10.1/joda-time-2.10.1.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jackson/1.3.12/dropwizard-jackson-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.9.9/jackson-datatype-guava-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.9.9/jackson-module-afterburner-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.9.9/jackson-datatype-joda-2.9.9.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-validation/1.3.12/dropwizard-validation-1.3.12.jar:/home/zx/.m2/repository/org/hibernate/hibernate-validator/5.4.3.Final/hibernate-validator-5.4.3.Final.jar:/home/zx/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/zx/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/zx/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar:/home/zx/.m2/repository/org/glassfish/javax.el/3.0.0/javax.el-3.0.0.jar:/home/zx/.m2/repository/org/javassist/javassist/3.24.1-GA/javassist-3.24.1-GA.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-configuration/1.3.12/dropwizard-configuration-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.9/jackson-dataformat-yaml-2.9.9.jar:/home/zx/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar:/home/zx/.m2/repository/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar:/home/zx/.m2/repository/org/apache/commons/commons-text/1.2/commons-text-1.2.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-metrics/1.3.12/dropwizard-metrics-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jersey/1.3.12/dropwizard-jersey-1.3.12.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-server/2.25.1/jersey-server-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-common/2.25.1/jersey-common-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.25.1/jersey-guava-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-client/2.25.1/jersey-client-2.25.1.jar:/home/zx/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.25.1/jersey-media-jaxb-2.25.1.jar:/home/zx/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-api/2.5.0-b32/hk2-api-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-utils/2.5.0-b32/hk2-utils-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.5.0-b32/aopalliance-repackaged-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/external/javax.inject/2.5.0-b32/javax.inject-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-locator/2.5.0-b32/hk2-locator-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/jersey/ext/jersey-metainf-services/2.25.1/jersey-metainf-services-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/ext/jersey-bean-validation/2.25.1/jersey-bean-validation-2.25.1.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jersey2/4.0.5/metrics-jersey2-4.0.5.jar:/home/zx/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.9/jackson-jaxrs-json-provider-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.9/jackson-jaxrs-base-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar:/home/zx/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.25.1/jersey-container-servlet-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.25.1/jersey-container-servlet-core-2.25.1.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-server/9.4.18.v20190429/jetty-server-9.4.18.v20190429.jar:/home/zx/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-io/9.4.18.v20190429/jetty-io-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-webapp/9.4.18.v20190429/jetty-webapp-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-xml/9.4.18.v20190429/jetty-xml-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-continuation/9.4.18.v20190429/jetty-continuation-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-servlets/1.3.12/dropwizard-servlets-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-annotation/4.0.5/metrics-annotation-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jetty/1.3.12/dropwizard-jetty-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jetty9/4.0.5/metrics-jetty9-4.0.5.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.18.v20190429/jetty-servlet-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-security/9.4.18.v20190429/jetty-security-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-servlets/9.4.18.v20190429/jetty-servlets-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-http/9.4.18.v20190429/jetty-http-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-lifecycle/1.3.12/dropwizard-lifecycle-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-core/4.0.5/metrics-core-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jvm/4.0.5/metrics-jvm-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jmx/4.0.5/metrics-jmx-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-servlets/4.0.5/metrics-servlets-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-json/4.0.5/metrics-json-4.0.5.jar:/home/zx/.m2/repository/com/papertrail/profiler/1.0.2/profiler-1.0.2.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-healthchecks/4.0.5/metrics-healthchecks-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-request-logging/1.3.12/dropwizard-request-logging-1.3.12.jar:/home/zx/.m2/repository/ch/qos/logback/logback-access/1.2.3/logback-access-1.2.3.jar:/home/zx/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.8.1/argparse4j-0.8.1.jar:/home/zx/.m2/repository/org/eclipse/jetty/toolchain/setuid/jetty-setuid-java/1.0.3/jetty-setuid-java-1.0.3.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-assets/1.3.12/dropwizard-assets-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-logging/1.3.12/dropwizard-logging-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-logback/4.0.5/metrics-logback-4.0.5.jar:/home/zx/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/home/zx/.m2/repository/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar:/home/zx/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/zx/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/zx/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.26/log4j-over-slf4j-1.7.26.jar:/home/zx/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.26/jcl-over-slf4j-1.7.26.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-util/9.4.18.v20190429/jetty-util-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-db/1.3.12/dropwizard-db-1.3.12.jar:/home/zx/.m2/repository/org/apache/tomcat/tomcat-jdbc/9.0.16/tomcat-jdbc-9.0.16.jar:/home/zx/.m2/repository/org/apache/tomcat/tomcat-juli/9.0.16/tomcat-juli-9.0.16.jar:"/>
+    <property name="java.vm.vendor" value="Red Hat, Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.redhat.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/home/zx/workspace/macrobase/legacy/target/surefire/surefirebooter-20230618171739623_3.jar /home/zx/workspace/macrobase/legacy/target/surefire 2023-06-18T17-17-38_044-jvmRun1 surefire-20230618171739623_1tmp surefire_0-20230618171739623_2tmp"/>
+    <property name="surefire.test.class.path" value="/home/zx/workspace/macrobase/legacy/target/test-classes:/home/zx/workspace/macrobase/legacy/target/classes:/home/zx/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/zx/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/zx/.m2/repository/org/postgresql/postgresql/9.3-1104-jdbc41/postgresql-9.3-1104-jdbc41.jar:/home/zx/.m2/repository/mysql/mysql-connector-java/6.0.2/mysql-connector-java-6.0.2.jar:/home/zx/.m2/repository/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar:/home/zx/.m2/repository/org/apache/commons/commons-csv/1.2/commons-csv-1.2.jar:/home/zx/.m2/repository/com/esotericsoftware/kryo/3.0.3/kryo-3.0.3.jar:/home/zx/.m2/repository/com/esotericsoftware/reflectasm/1.10.1/reflectasm-1.10.1.jar:/home/zx/.m2/repository/org/ow2/asm/asm/5.0.3/asm-5.0.3.jar:/home/zx/.m2/repository/com/esotericsoftware/minlog/1.3.0/minlog-1.3.0.jar:/home/zx/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/zx/.m2/repository/org/xerial/snappy/snappy-java/1.1.2/snappy-java-1.1.2.jar:/home/zx/.m2/repository/com/google/code/gson/gson/2.5/gson-2.5.jar:/home/zx/.m2/repository/com/mockrunner/mockrunner-jdbc/1.1.1/mockrunner-jdbc-1.1.1.jar:/home/zx/.m2/repository/com/mockrunner/mockrunner-core/1.1.1/mockrunner-core-1.1.1.jar:/home/zx/.m2/repository/jdom/jdom/1.0/jdom-1.0.jar:/home/zx/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/zx/.m2/repository/com/kirkk/jaranalyzer/1.2/jaranalyzer-1.2.jar:/home/zx/.m2/repository/bcel/bcel/5.1/bcel-5.1.jar:/home/zx/.m2/repository/regexp/regexp/1.2/regexp-1.2.jar:/home/zx/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar:/home/zx/.m2/repository/ant/ant/1.6.5/ant-1.6.5.jar:/home/zx/.m2/repository/nekohtml/nekohtml/0.9.5/nekohtml-0.9.5.jar:/home/zx/.m2/repository/xerces/xercesImpl/2.4.0/xercesImpl-2.4.0.jar:/home/zx/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-core/1.3.12/dropwizard-core-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-util/1.3.12/dropwizard-util-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/home/zx/.m2/repository/com/google/guava/guava/24.1.1-jre/guava-24.1.1-jre.jar:/home/zx/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/zx/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/zx/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/zx/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/zx/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/zx/.m2/repository/joda-time/joda-time/2.10.1/joda-time-2.10.1.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jackson/1.3.12/dropwizard-jackson-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.9.9/jackson-datatype-guava-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.9/jackson-datatype-jsr310-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.9/jackson-datatype-jdk8-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.9/jackson-module-parameter-names-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-afterburner/2.9.9/jackson-module-afterburner-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.9.9/jackson-datatype-joda-2.9.9.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-validation/1.3.12/dropwizard-validation-1.3.12.jar:/home/zx/.m2/repository/org/hibernate/hibernate-validator/5.4.3.Final/hibernate-validator-5.4.3.Final.jar:/home/zx/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/zx/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/zx/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar:/home/zx/.m2/repository/org/glassfish/javax.el/3.0.0/javax.el-3.0.0.jar:/home/zx/.m2/repository/org/javassist/javassist/3.24.1-GA/javassist-3.24.1-GA.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-configuration/1.3.12/dropwizard-configuration-1.3.12.jar:/home/zx/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.9.9/jackson-dataformat-yaml-2.9.9.jar:/home/zx/.m2/repository/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar:/home/zx/.m2/repository/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar:/home/zx/.m2/repository/org/apache/commons/commons-text/1.2/commons-text-1.2.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-metrics/1.3.12/dropwizard-metrics-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jersey/1.3.12/dropwizard-jersey-1.3.12.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-server/2.25.1/jersey-server-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-common/2.25.1/jersey-common-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.25.1/jersey-guava-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/core/jersey-client/2.25.1/jersey-client-2.25.1.jar:/home/zx/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.25.1/jersey-media-jaxb-2.25.1.jar:/home/zx/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-api/2.5.0-b32/hk2-api-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-utils/2.5.0-b32/hk2-utils-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.5.0-b32/aopalliance-repackaged-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/external/javax.inject/2.5.0-b32/javax.inject-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/hk2/hk2-locator/2.5.0-b32/hk2-locator-2.5.0-b32.jar:/home/zx/.m2/repository/org/glassfish/jersey/ext/jersey-metainf-services/2.25.1/jersey-metainf-services-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/ext/jersey-bean-validation/2.25.1/jersey-bean-validation-2.25.1.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jersey2/4.0.5/metrics-jersey2-4.0.5.jar:/home/zx/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.9.9/jackson-jaxrs-json-provider-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.9.9/jackson-jaxrs-base-2.9.9.jar:/home/zx/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.9.9/jackson-module-jaxb-annotations-2.9.9.jar:/home/zx/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.25.1/jersey-container-servlet-2.25.1.jar:/home/zx/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.25.1/jersey-container-servlet-core-2.25.1.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-server/9.4.18.v20190429/jetty-server-9.4.18.v20190429.jar:/home/zx/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-io/9.4.18.v20190429/jetty-io-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-webapp/9.4.18.v20190429/jetty-webapp-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-xml/9.4.18.v20190429/jetty-xml-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-continuation/9.4.18.v20190429/jetty-continuation-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-servlets/1.3.12/dropwizard-servlets-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-annotation/4.0.5/metrics-annotation-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-jetty/1.3.12/dropwizard-jetty-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jetty9/4.0.5/metrics-jetty9-4.0.5.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.18.v20190429/jetty-servlet-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-security/9.4.18.v20190429/jetty-security-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-servlets/9.4.18.v20190429/jetty-servlets-9.4.18.v20190429.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-http/9.4.18.v20190429/jetty-http-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-lifecycle/1.3.12/dropwizard-lifecycle-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-core/4.0.5/metrics-core-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jvm/4.0.5/metrics-jvm-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-jmx/4.0.5/metrics-jmx-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-servlets/4.0.5/metrics-servlets-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-json/4.0.5/metrics-json-4.0.5.jar:/home/zx/.m2/repository/com/papertrail/profiler/1.0.2/profiler-1.0.2.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-healthchecks/4.0.5/metrics-healthchecks-4.0.5.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-request-logging/1.3.12/dropwizard-request-logging-1.3.12.jar:/home/zx/.m2/repository/ch/qos/logback/logback-access/1.2.3/logback-access-1.2.3.jar:/home/zx/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.8.1/argparse4j-0.8.1.jar:/home/zx/.m2/repository/org/eclipse/jetty/toolchain/setuid/jetty-setuid-java/1.0.3/jetty-setuid-java-1.0.3.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-assets/1.3.12/dropwizard-assets-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-logging/1.3.12/dropwizard-logging-1.3.12.jar:/home/zx/.m2/repository/io/dropwizard/metrics/metrics-logback/4.0.5/metrics-logback-4.0.5.jar:/home/zx/.m2/repository/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar:/home/zx/.m2/repository/org/slf4j/jul-to-slf4j/1.7.26/jul-to-slf4j-1.7.26.jar:/home/zx/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/zx/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/zx/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.26/log4j-over-slf4j-1.7.26.jar:/home/zx/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.26/jcl-over-slf4j-1.7.26.jar:/home/zx/.m2/repository/org/eclipse/jetty/jetty-util/9.4.18.v20190429/jetty-util-9.4.18.v20190429.jar:/home/zx/.m2/repository/io/dropwizard/dropwizard-db/1.3.12/dropwizard-db-1.3.12.jar:/home/zx/.m2/repository/org/apache/tomcat/tomcat-jdbc/9.0.16/tomcat-jdbc-9.0.16.jar:/home/zx/.m2/repository/org/apache/tomcat/tomcat-juli/9.0.16/tomcat-juli-9.0.16.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/zx"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre"/>
+    <property name="basedir" value="/home/zx/workspace/macrobase/legacy"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/zx/workspace/macrobase/legacy/target/surefire/surefirebooter-20230618171739623_3.jar"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_345-b01"/>
+    <property name="user.name" value="zx"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="3.10.0-957.el7.x86_64"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/zx/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugzilla.redhat.com/enter_bug.cgi?product=Red%20Hat%20Enterprise%20Linux%207&amp;component=java-1.8.0-openjdk"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_345"/>
+    <property name="user.dir" value="/home/zx/workspace/macrobase/legacy"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/home/zx/pgserver/lib:/usr/local/lib:/home/zx/pgserver/lib:/usr/local/lib:/home/spadcn/hc/unvdb-22.4.15-linux-x86_64/lib:/usr/local/mpc/lib:/usr/local/gmp/lib:/usr/local/mpfr/lib:/usr/local/gcc-11/lib64:/usr/local/lib64::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Red Hat, Inc."/>
+    <property name="java.vm.version" value="25.345-b01"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.345.b01-1.el7_9.x86_64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testSensor10KPower" classname="macrobase.pipeline.BasicOneShotEWStreamingPipelineTest" time="0.11">
+    <system-out><![CDATA[17:17:44.408 [main] DEBUG macrobase.analysis.pipeline.BasePipeline - Running query MacroBaseQuery
+17:17:44.409 [main] DEBUG macrobase.analysis.pipeline.BasePipeline - CONFIG:
+macrobase.analysis.minOIRatio: 1
+macrobase.analysis.minSupport: 0.01
+macrobase.analysis.randomSeed: 0
+macrobase.analysis.streaming.decayRate: 0.01
+macrobase.analysis.streaming.decayType: TUPLE_BASED
+macrobase.analysis.streaming.inlierItemSummarySize: 1000
+macrobase.analysis.streaming.inputReservoirSize: 1000
+macrobase.analysis.streaming.modelUpdatePeriod: 1000
+macrobase.analysis.streaming.outlierSummarySize: 1000
+macrobase.analysis.streaming.scoreReservoirSize: 1000
+macrobase.analysis.streaming.summaryUpdatePeriod: 1000
+macrobase.analysis.streaming.warmupCount: 100
+macrobase.analysis.targetPercentile: 0.99
+macrobase.analysis.usePercentile: true
+macrobase.loader.attributes: device_id
+macrobase.loader.csv.compression: GZIP
+macrobase.loader.csv.file: src/test/resources/data/sensor10k.csv.gz
+macrobase.loader.loaderType: CSV_LOADER
+macrobase.loader.metrics: power_drain
+17:17:44.436 [main] INFO macrobase.ingest.CSVIngester - 10479/10479 rows successfully parsed (0 malformed rows)
+17:17:44.494 [main] INFO macrobase.conf.MacroBaseConf - By default: using MAD transform for dimension 1 metric.
+17:17:44.520 [main] DEBUG macrobase.analysis.summary.itemset.ExponentiallyDecayingEmergingItemsets - REQUIRED SUPPORT: 0.2702855855771482 0.01
+17:17:44.521 [main] INFO macrobase.analysis.pipeline.BasicOneShotEWStreamingPipeline - took 32ms (327468.75 tuples/sec)
+]]></system-out>
+  </testcase>
+  <testcase name="testMCDAnalyzer" classname="macrobase.pipeline.BasicOneShotEWStreamingPipelineTest" time="0.043">
+    <system-out><![CDATA[17:17:44.521 [main] DEBUG macrobase.analysis.pipeline.BasePipeline - Running query MacroBaseQuery
+17:17:44.522 [main] DEBUG macrobase.analysis.pipeline.BasePipeline - CONFIG:
+macrobase.analysis.mcd.alpha: 0.5
+macrobase.analysis.mcd.stoppingDelta: 0.001
+macrobase.analysis.metrics.lowTransform: A4,A5
+macrobase.analysis.minOIRatio: 1
+macrobase.analysis.minSupport: 0.05
+macrobase.analysis.randomSeed: 0
+macrobase.analysis.streaming.decayRate: 0.01
+macrobase.analysis.streaming.decayType: TUPLE_BASED
+macrobase.analysis.streaming.inlierItemSummarySize: 1000
+macrobase.analysis.streaming.inputReservoirSize: 10
+macrobase.analysis.streaming.modelUpdatePeriod: 50
+macrobase.analysis.streaming.outlierSummarySize: 1000
+macrobase.analysis.streaming.scoreReservoirSize: 10
+macrobase.analysis.streaming.summaryUpdatePeriod: 50
+macrobase.analysis.streaming.warmupCount: 30
+macrobase.analysis.targetPercentile: 0.99
+macrobase.analysis.usePercentile: true
+macrobase.loader.attributes: A1,A2,A3
+macrobase.loader.csv.file: src/test/resources/data/simple.csv
+macrobase.loader.loaderType: CSV_LOADER
+macrobase.loader.metrics: A4,A5
+17:17:44.522 [main] INFO macrobase.ingest.CSVIngester - 100/100 rows successfully parsed (0 malformed rows)
+17:17:44.559 [main] INFO macrobase.conf.MacroBaseConf - By default: using MCD transform for dimension 2 metrics.
+17:17:44.560 [main] DEBUG macrobase.analysis.stats.MinCovDet - Number of iterations in MCD step: 1
+17:17:44.560 [main] DEBUG macrobase.analysis.stats.MinCovDet - Number of iterations in MCD step: 1
+17:17:44.562 [main] DEBUG macrobase.analysis.summary.itemset.ExponentiallyDecayingEmergingItemsets - REQUIRED SUPPORT: 1.047 0.05
+17:17:44.563 [main] INFO macrobase.analysis.pipeline.BasicOneShotEWStreamingPipeline - took 5ms (20000.0 tuples/sec)
+17:17:44.564 [main] DEBUG macrobase.pipeline.BasicOneShotEWStreamingPipelineTest - outliers: 7.000000
+inliers: 93.000000
+load time 36ms
+execution time: 4ms
+summarization time: 1ms
+
+-----
+
+support: 0.190544
+records: 3.990000
+ratio: 10.946157
+
+Columns:
+	A1: 0
+
+-----
+
+
+]]></system-out>
+  </testcase>
+  <testcase name="testSensor10KTemp" classname="macrobase.pipeline.BasicOneShotEWStreamingPipelineTest" time="0.1">
+    <system-out><![CDATA[17:17:44.565 [main] DEBUG macrobase.analysis.pipeline.BasePipeline - Running query MacroBaseQuery
+17:17:44.565 [main] DEBUG macrobase.analysis.pipeline.BasePipeline - CONFIG:
+macrobase.analysis.metrics.lowTransform: temperature
+macrobase.analysis.minOIRatio: 1
+macrobase.analysis.minSupport: 0.06
+macrobase.analysis.randomSeed: 0
+macrobase.analysis.streaming.decayRate: 0.01
+macrobase.analysis.streaming.decayType: TUPLE_BASED
+macrobase.analysis.streaming.inlierItemSummarySize: 1000
+macrobase.analysis.streaming.inputReservoirSize: 1000
+macrobase.analysis.streaming.modelUpdatePeriod: 1000
+macrobase.analysis.streaming.outlierSummarySize: 1000
+macrobase.analysis.streaming.scoreReservoirSize: 1000
+macrobase.analysis.streaming.summaryUpdatePeriod: 1000
+macrobase.analysis.streaming.warmupCount: 100
+macrobase.analysis.targetPercentile: 0.99
+macrobase.analysis.usePercentile: true
+macrobase.loader.attributes: device_id,model,firmware_version
+macrobase.loader.csv.compression: GZIP
+macrobase.loader.csv.file: src/test/resources/data/sensor10k.csv.gz
+macrobase.loader.loaderType: CSV_LOADER
+macrobase.loader.metrics: temperature
+17:17:44.591 [main] INFO macrobase.ingest.CSVIngester - 10479/10479 rows successfully parsed (0 malformed rows)
+17:17:44.628 [main] INFO macrobase.conf.MacroBaseConf - By default: using MAD transform for dimension 1 metric.
+17:17:44.663 [main] DEBUG macrobase.analysis.summary.itemset.ExponentiallyDecayingEmergingItemsets - REQUIRED SUPPORT: 34.86404556367189 0.06
+17:17:44.663 [main] INFO macrobase.analysis.pipeline.BasicOneShotEWStreamingPipeline - took 35ms (299400.0 tuples/sec)
+17:17:44.664 [main] DEBUG macrobase.pipeline.BasicOneShotEWStreamingPipelineTest - outliers: 208.000000
+inliers: 10271.000000
+load time 62ms
+execution time: 35ms
+summarization time: 0ms
+
+-----
+
+support: 0.148720
+records: 86.416610
+ratio: 1.909085
+
+Columns:
+	firmware_version: 0.4
+
+-----
+
+support: 0.137810
+records: 80.076892
+ratio: 2.803300
+
+Columns:
+	model: M101
+
+-----
+
+support: 0.093465
+records: 54.309552
+ratio: 9.627568
+
+Columns:
+	firmware_version: 0.4
+	model: M101
+
+-----
+
+
+]]></system-out>
+  </testcase>
+  <testcase name="testMADAnalyzer" classname="macrobase.pipeline.BasicOneShotEWStreamingPipelineTest" time="0.025">
+    <system-out><![CDATA[17:17:44.665 [main] DEBUG macrobase.analysis.pipeline.BasePipeline - Running query MacroBaseQuery
+17:17:44.665 [main] DEBUG macrobase.analysis.pipeline.BasePipeline - CONFIG:
+macrobase.analysis.metrics.lowTransform: A5
+macrobase.analysis.minOIRatio: 1
+macrobase.analysis.minSupport: 0.02
+macrobase.analysis.randomSeed: 0
+macrobase.analysis.streaming.decayRate: 0.01
+macrobase.analysis.streaming.decayType: TUPLE_BASED
+macrobase.analysis.streaming.inlierItemSummarySize: 1000
+macrobase.analysis.streaming.inputReservoirSize: 10
+macrobase.analysis.streaming.modelUpdatePeriod: 50
+macrobase.analysis.streaming.outlierSummarySize: 1000
+macrobase.analysis.streaming.scoreReservoirSize: 10
+macrobase.analysis.streaming.summaryUpdatePeriod: 50
+macrobase.analysis.streaming.warmupCount: 10
+macrobase.analysis.targetPercentile: 0.99
+macrobase.analysis.usePercentile: true
+macrobase.loader.attributes: A1,A2,A3,A4
+macrobase.loader.csv.file: src/test/resources/data/simple.csv
+macrobase.loader.loaderType: CSV_LOADER
+macrobase.loader.metrics: A5
+17:17:44.665 [main] INFO macrobase.ingest.CSVIngester - 100/100 rows successfully parsed (0 malformed rows)
+17:17:44.687 [main] INFO macrobase.conf.MacroBaseConf - By default: using MAD transform for dimension 1 metric.
+17:17:44.688 [main] DEBUG macrobase.analysis.summary.itemset.ExponentiallyDecayingEmergingItemsets - REQUIRED SUPPORT: 3.344 0.02
+17:17:44.688 [main] INFO macrobase.analysis.pipeline.BasicOneShotEWStreamingPipeline - took 1ms (100000.0 tuples/sec)
+17:17:44.689 [main] DEBUG macrobase.pipeline.BasicOneShotEWStreamingPipelineTest - outliers: 42.000000
+inliers: 58.000000
+load time 21ms
+execution time: 1ms
+summarization time: 0ms
+
+-----
+
+support: 0.035706
+records: 5.970000
+ratio: 2.330484
+
+Columns:
+	A1: 0
+
+-----
+
+
+]]></system-out>
+  </testcase>
+</testsuite>

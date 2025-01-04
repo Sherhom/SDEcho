@@ -1,0 +1,524 @@
+./bin
+
+Welcome to
+    __  ___                      ____                
+   /  |/  /___ _______________  / __ )____ _________ 
+  / /|_/ / __ `/ ___/ ___/ __ \/ __  / __ `/ ___/ _ \
+ / /  / / /_/ / /__/ /  / /_/ / /_/ / /_/ (__  )  __/
+/_/  /_/\__,_/\___/_/   \____/_____/\__,_/____/\___/ 
+                                                     
+
+IMPORT FROM CSV FILE '/home/zx/csv/webret2000_1.csv' INTO
+    store_returns(
+        d_date char(100),
+        date double,
+        timeline double,
+        week double,
+        year double,
+        i_brand char(100),
+        i_class char(100),
+        category char(100),
+        manufact char(100),
+        i_color char(100),
+        street_name char(100),
+        street_type char(100),
+        city char(100),
+        county char(100),
+        state char(100),
+        ca_location_type char(100),
+        customerflag char(100),
+        c_birth_year char(100),
+        c_first_sales_date_sk char(100),
+       reason char(100),
+       doubleweek double);
+
+26241 rows
+
+d_date                 |  2000/8/8
+date                   |  220.0
+timeline               |  7.0
+week                   |  32.0
+year                   |  2000.0
+i_brand                |  amalgscholar #1
+i_class                |  rock
+category               |  5
+manufact               |  59
+i_color                |  wheat
+street_name            |  NULL
+street_type            |  Court
+city                   |  NULL
+county                 |  NULL
+state                  |  MO
+ca_location_type       |  NULL
+customerflag           |  NULL
+c_birth_year           |  1960
+c_first_sales_date_sk  |  NULL
+reason                 |  33
+doubleweek             |  16.0
+----------------------------------------------
+d_date                 |  2000/6/27
+date                   |  178.0
+timeline               |  5.0
+week                   |  26.0
+year                   |  2000.0
+i_brand                |  NULL
+i_class                |  science
+category               |  9
+manufact               |  NULL
+i_color                |  NULL
+street_name            |  Central Ridge
+street_type            |  RD
+city                   |  Arlington
+county                 |  Bedford County
+state                  |  VA
+ca_location_type       |  condo
+customerflag           |  N
+c_birth_year           |  1937
+c_first_sales_date_sk  |  2451262
+reason                 |  21
+doubleweek             |  13.0
+---------------------------------------------
+d_date                 |  2000/3/24
+date                   |  83.0
+timeline               |  2.0
+week                   |  12.0
+year                   |  2000.0
+i_brand                |  importomaxi #11
+i_class                |  business
+category               |  9
+manufact               |  776
+i_color                |  blue
+street_name            |  NULL
+street_type            |  RD
+city                   |  Hillcrest
+county                 |  Rooks County
+state                  |  NULL
+ca_location_type       |  NULL
+customerflag           |  N
+c_birth_year           |  1989
+c_first_sales_date_sk  |  2449977
+reason                 |  16
+doubleweek             |  6.0
+----------------------------------------------
+d_date                 |  2000/1/16
+date                   |  15.0
+timeline               |  .0
+week                   |  2.0
+year                   |  2000.0
+i_brand                |  edu packnameless #4
+i_class                |  camping
+category               |  8
+manufact               |  673
+i_color                |  smoke
+street_name            |  6th 2nd
+street_type            |  Cir.
+city                   |  Deerfield
+county                 |  Searcy County
+state                  |  AR
+ca_location_type       |  condo
+customerflag           |  N
+c_birth_year           |  1971
+c_first_sales_date_sk  |  2452596
+reason                 |  7
+doubleweek             |  1.0
+--------------------------------------------------
+d_date                 |  2000/10/2
+date                   |  275.0
+timeline               |  9.0
+week                   |  39.0
+year                   |  2000.0
+i_brand                |  importoimporto #2
+i_class                |  shirts
+category               |  2
+manufact               |  321
+i_color                |  smoke
+street_name            |  NULL
+street_type            |  Boulevard
+city                   |  NULL
+county                 |  NULL
+state                  |  NULL
+ca_location_type       |  condo
+customerflag           |  NULL
+c_birth_year           |  NULL
+c_first_sales_date_sk  |  NULL
+reason                 |  15
+doubleweek             |  19.0
+------------------------------------------------
+d_date                 |  2000/3/22
+date                   |  81.0
+timeline               |  2.0
+week                   |  12.0
+year                   |  2000.0
+i_brand                |  amalgimporto #2
+i_class                |  accessories
+category               |  2
+manufact               |  393
+i_color                |  puff
+street_name            |  Oak
+street_type            |  Wy
+city                   |  NULL
+county                 |  NULL
+state                  |  CO
+ca_location_type       |  single family
+customerflag           |  Y
+c_birth_year           |  1992
+c_first_sales_date_sk  |  2449108
+reason                 |  9
+doubleweek             |  6.0
+----------------------------------------------
+d_date                 |  2000/6/1
+date                   |  152.0
+timeline               |  5.0
+week                   |  22.0
+year                   |  2000.0
+i_brand                |  amalgedu pack #1
+i_class                |  womens
+category               |  4
+manufact               |  370
+i_color                |  dark
+street_name            |  10th
+street_type            |  Lane
+city                   |  Friendship
+county                 |  Stanton County
+state                  |  NE
+ca_location_type       |  condo
+customerflag           |  N
+c_birth_year           |  1961
+c_first_sales_date_sk  |  2449368
+reason                 |  25
+doubleweek             |  11.0
+-----------------------------------------------
+d_date                 |  2000/9/24
+date                   |  267.0
+timeline               |  8.0
+week                   |  38.0
+year                   |  2000.0
+i_brand                |  amalgedu pack #1
+i_class                |  womens
+category               |  4
+manufact               |  144
+i_color                |  rose
+street_name            |  Walnut
+street_type            |  Street
+city                   |  NULL
+county                 |  Garza County
+state                  |  NULL
+ca_location_type       |  NULL
+customerflag           |  Y
+c_birth_year           |  1954
+c_first_sales_date_sk  |  2452248
+reason                 |  1
+doubleweek             |  19.0
+-----------------------------------------------
+d_date                 |  2000/9/14
+date                   |  257.0
+timeline               |  8.0
+week                   |  37.0
+year                   |  2000.0
+i_brand                |  amalgmaxi #3
+i_class                |  arts
+category               |  9
+manufact               |  711
+i_color                |  purple
+street_name            |  NULL
+street_type            |  NULL
+city                   |  NULL
+county                 |  NULL
+state                  |  MT
+ca_location_type       |  NULL
+customerflag           |  N
+c_birth_year           |  1974
+c_first_sales_date_sk  |  2449695
+reason                 |  24
+doubleweek             |  18.0
+-------------------------------------------
+d_date                 |  2000/5/12
+date                   |  132.0
+timeline               |  4.0
+week                   |  19.0
+year                   |  2000.0
+i_brand                |  amalgnameless #7
+i_class                |  athletic shoes
+category               |  8
+manufact               |  154
+i_color                |  tan
+street_name            |  Fifth
+street_type            |  Cir.
+city                   |  Gary
+county                 |  Bibb County
+state                  |  GA
+ca_location_type       |  condo
+customerflag           |  Y
+c_birth_year           |  1965
+c_first_sales_date_sk  |  2451580
+reason                 |  25
+doubleweek             |  9.0
+-----------------------------------------------
+
+...
+
+d_date                 |  2001/2/1
+date                   |  31.0
+timeline               |  1.0
+week                   |  5.0
+year                   |  2001.0
+i_brand                |  corpnameless #8
+i_class                |  football
+category               |  8
+manufact               |  217
+i_color                |  sienna
+street_name            |  Main Oak
+street_type            |  Blvd
+city                   |  Salem
+county                 |  Sagadahoc County
+state                  |  ME
+ca_location_type       |  condo
+customerflag           |  Y
+c_birth_year           |  1947
+c_first_sales_date_sk  |  2451006
+reason                 |  35
+doubleweek             |  2.0
+-----------------------------------------------
+d_date                 |  2001/11/22
+date                   |  325.0
+timeline               |  10.0
+week                   |  47.0
+year                   |  2001.0
+i_brand                |  edu packexporti #2
+i_class                |  school-uniforms
+category               |  3
+manufact               |  25
+i_color                |  peru
+street_name            |  Second 1st
+street_type            |  Cir.
+city                   |  Jamestown
+county                 |  Will County
+state                  |  IL
+ca_location_type       |  single family
+customerflag           |  N
+c_birth_year           |  1985
+c_first_sales_date_sk  |  2452637
+reason                 |  2
+doubleweek             |  23.0
+-------------------------------------------------
+d_date                 |  2001/6/13
+date                   |  163.0
+timeline               |  5.0
+week                   |  24.0
+year                   |  2001.0
+i_brand                |  importoscholar #2
+i_class                |  country
+category               |  5
+manufact               |  563
+i_color                |  goldenrod
+street_name            |  Woodland
+street_type            |  Circle
+city                   |  Bunker Hill
+county                 |  Ashe County
+state                  |  NC
+ca_location_type       |  apartment
+customerflag           |  Y
+c_birth_year           |  1979
+c_first_sales_date_sk  |  2449884
+reason                 |  33
+doubleweek             |  12.0
+------------------------------------------------
+d_date                 |  2001/8/29
+date                   |  240.0
+timeline               |  7.0
+week                   |  35.0
+year                   |  2001.0
+i_brand                |  corpmaxi #2
+i_class                |  parenting
+category               |  9
+manufact               |  523
+i_color                |  rosy
+street_name            |  Center Williams
+street_type            |  Street
+city                   |  Riverdale
+county                 |  Plumas County
+state                  |  CA
+ca_location_type       |  single family
+customerflag           |  NULL
+c_birth_year           |  1972
+c_first_sales_date_sk  |  NULL
+reason                 |  5
+doubleweek             |  17.0
+----------------------------------------------
+d_date                 |  2001/9/30
+date                   |  272.0
+timeline               |  8.0
+week                   |  39.0
+year                   |  2001.0
+i_brand                |  exportiamalg #2
+i_class                |  maternity
+category               |  1
+manufact               |  502
+i_color                |  slate
+street_name            |  Pine Pine
+street_type            |  Blvd
+city                   |  Millbrook
+county                 |  Osceola County
+state                  |  IA
+ca_location_type       |  apartment
+customerflag           |  N
+c_birth_year           |  1963
+c_first_sales_date_sk  |  2450590
+reason                 |  22
+doubleweek             |  19.0
+----------------------------------------------
+d_date                 |  2001/6/6
+date                   |  156.0
+timeline               |  5.0
+week                   |  23.0
+year                   |  2001.0
+i_brand                |  exportiimporto #1
+i_class                |  pants
+category               |  2
+manufact               |  151
+i_color                |  sienna
+street_name            |  Miller
+street_type            |  Wy
+city                   |  Berea
+county                 |  Webster County
+state                  |  IA
+ca_location_type       |  apartment
+customerflag           |  Y
+c_birth_year           |  1934
+c_first_sales_date_sk  |  2449347
+reason                 |  15
+doubleweek             |  11.0
+------------------------------------------------
+d_date                 |  2001/7/16
+date                   |  196.0
+timeline               |  6.0
+week                   |  28.0
+year                   |  2001.0
+i_brand                |  corpmaxi #2
+i_class                |  golf
+category               |  8
+manufact               |  69
+i_color                |  royal
+street_name            |  Lee
+street_type            |  Cir.
+city                   |  Summit
+county                 |  Montgomery County
+state                  |  VA
+ca_location_type       |  single family
+customerflag           |  Y
+c_birth_year           |  1937
+c_first_sales_date_sk  |  2449297
+reason                 |  15
+doubleweek             |  14.0
+------------------------------------------------
+d_date                 |  2001/5/22
+date                   |  141.0
+timeline               |  4.0
+week                   |  21.0
+year                   |  2001.0
+i_brand                |  importoedu pack #2
+i_class                |  mens
+category               |  4
+manufact               |  178
+i_color                |  pink
+street_name            |  Lakeview
+street_type            |  ST
+city                   |  Sunnyside
+county                 |  Montcalm County
+state                  |  MI
+ca_location_type       |  apartment
+customerflag           |  N
+c_birth_year           |  1939
+c_first_sales_date_sk  |  2451222
+reason                 |  3
+doubleweek             |  10.0
+-------------------------------------------------
+d_date                 |  2001/8/20
+date                   |  231.0
+timeline               |  7.0
+week                   |  33.0
+year                   |  2001.0
+i_brand                |  importoamalgamalg #8
+i_class                |  monitors
+category               |  10
+manufact               |  588
+i_color                |  medium
+street_name            |  Third Main
+street_type            |  Cir.
+city                   |  Fox
+county                 |  Nueces County
+state                  |  TX
+ca_location_type       |  condo
+customerflag           |  N
+c_birth_year           |  1948
+c_first_sales_date_sk  |  2450677
+reason                 |  22
+doubleweek             |  16.0
+---------------------------------------------------
+d_date                 |  2001/11/7
+date                   |  310.0
+timeline               |  10.0
+week                   |  45.0
+year                   |  2001.0
+i_brand                |  univmaxi #6
+i_class                |  pools
+category               |  8
+manufact               |  630
+i_color                |  tomato
+street_name            |  Park
+street_type            |  ST
+city                   |  Montague
+county                 |  Mason County
+state                  |  IL
+ca_location_type       |  condo
+customerflag           |  N
+c_birth_year           |  1954
+c_first_sales_date_sk  |  2449714
+reason                 |  17
+doubleweek             |  22.0
+-------------------------------------------
+SELECT * FROM
+             DIFF
+                 (SELECT * FROM store_returns WHERE year > 2000.5) outliers,
+             (SELECT * FROM store_returns WHERE year < 2000.5) inliers
+    ON i_brand,i_class,category,manufact,i_color,street_name WITH MIN TRENDDIFF -385.96;
+
+0    [main] INFO  APLSummarizer  - Encoded in: 31 ms
+1    [main] INFO  APLSummarizer  - Encoded Categories: 6976
+6    [main] INFO  APrioriLinear  - NumThreads: 1
+116  [main] INFO  APrioriLinear  - Time spent in order 1:  97 ms
+1197 [main] INFO  APrioriLinear  - Time spent in order 2:  1081 ms
+3427 [main] INFO  APrioriLinear  - Time spent in order 3:  2230 ms
+3427 [main] INFO  APrioriLinear  - Time spent in APriori:  3421 ms
+3754 [main] INFO  APLSummarizer  - Number of results: 478400
+运行时间：4.882 s
+478400 rows
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+|     i_class      |     i_brand      |     manufact     |     category     |     i_color      |   street_name    |  distance_score  |  distance_score  |
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+|        -         |edu packedu pac...|        -         |        -         |        -         |        -         |   -123.514832    |   -123.514832    |
+|        -         |   corpmaxi #8    |        -         |        -         |        -         |        -         |   -123.362699    |   -123.362699    |
+|        -         |importoedu pack #2|        -         |        -         |        -         |        -         |   -125.010057    |   -125.010057    |
+|        -         |       NULL       |        -         |        -         |        -         |        -         |    -125.73369    |    -125.73369    |
+|        -         |exportiimporto #2 |        -         |        -         |        -         |        -         |   -123.825187    |   -123.825187    |
+|        -         | exportimaxi #12  |        -         |        -         |        -         |        -         |   -120.483913    |   -120.483913    |
+|        -         | amalgnameless #4 |        -         |        -         |        -         |        -         |   -117.382554    |   -117.382554    |
+|        -         | brandnameless #6 |        -         |        -         |        -         |        -         |   -119.876761    |   -119.876761    |
+|        -         |corpamalgamalg #2 |        -         |        -         |        -         |        -         |   -118.488422    |   -118.488422    |
+|        -         | edu packamalg #1 |        -         |        -         |        -         |        -         |   -130.026801    |   -130.026801    |
+
+...
+
+|        -         |        -         |       135        |        -         |      salmon      |Washington High...|   -120.333736    |   -120.333736    |
+|        -         |  brandbrand #6   |        -         |        7         |        -         |  Lee Washington  |    -119.80062    |    -119.80062    |
+|        -         |        -         |       545        |        -         |     thistle      |      Miller      |   -119.608442    |   -119.608442    |
+|        -         |namelessunivama...|        -         |        10        |        -         |    Fifth 5th     |   -120.059144    |   -120.059144    |
+|        -         |brandunivamalg #15|        -         |        -         |      yellow      |  Church Lincoln  |   -120.059144    |   -120.059144    |
+|        -         |        -         |        89        |        -         |       pink       |       10th       |   -119.616804    |   -119.616804    |
+|        -         |  amalgbrand #1   |        -         |        -         |    turquoise     |      Spring      |   -119.842355    |   -119.842355    |
+|        -         |  amalgbrand #1   |        -         |        -         |    turquoise     |      Cherry      |   -120.167383    |   -120.167383    |
+|     mystery      | corpunivamalg #9 |       301        |        -         |        -         |        -         |   -120.692429    |   -120.692429    |
+|        -         |        -         |        89        |        -         |       pink       |     Chestnut     |   -119.842355    |   -119.842355    |
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
